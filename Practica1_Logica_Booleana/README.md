@@ -89,5 +89,5 @@ Para cada bit individual en una operación de 16-bit NOT, la tabla de verdad es 
 |       1       |       0       |
 
 ## Bibliografia
-Esta practica fue resuelta apoyandonos del siguiente material
+Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)
