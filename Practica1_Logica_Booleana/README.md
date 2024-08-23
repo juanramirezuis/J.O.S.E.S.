@@ -100,6 +100,19 @@ Para cada bit individual en una operación de 16-bit NOT, la tabla de verdad es 
 |       0       |       1       |
 |       1       |       0       |
 
+### 8. **16-bit AND**
+Una **16-bit AND** es una operación que aplica la puerta lógica **AND** a cada uno de los 16 bits de dos números de 16 bits, combinando cada par de bits correspondientes de las dos entradas.
+Para cada par de bits individuales en una operación de 16-bit AND, la tabla de verdad es la misma que la de la puerta AND:
+
+![alt text]([https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/16bit%20NOT.png?raw=true](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/16-bit%20And.PNG?raw=true))
+
+| Entrada A (Bit) | Entrada B (Bit) | Salida (A ∧ B) |
+|:---------------:|:---------------:|:---------------:
+|        0        |        0        |        0       |
+|        0        |        1        |        0       |
+|        1        |        0        |        0       |
+|        1        |        1        |        1       |
+
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)
