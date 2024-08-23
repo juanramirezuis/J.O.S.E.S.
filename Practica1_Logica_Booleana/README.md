@@ -171,9 +171,48 @@ se utiliza una configuración de 3 líneas de selección para elegir a cuál de 
 |      1       |       1      |       1      |     0    |     0    |     0    |     0    |     0    |     0    |     0    |     1    |
 
 ### 12. **16-bit MUX**
-Un **16-bit MUX**  es un dispositivo que selecciona una de varias entradas de 16 bits y la envía a la salida, basada en las señales de selección. En este caso, el MUX tiene 8 entradas de 16 bits y 3 líneas de selección para elegir cuál de las 8 entradas se dirigirá a la salida:
+Un **16-bit MUX**  es un dispositivo que selecciona una de las 16 entradas de 16 bits y la dirige a una salida de 16 bits, basándose en un conjunto de líneas de selección:
 
-![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/4-Way%20Demux.PNG?raw=true)
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/16-bit%20MUXs.png?raw=true)
+
+| Selección \(S_3\) | Selección \(S_2\) | Selección \(S_1\) | Selección \(S_0\) | Salida |
+|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:------:|
+|         0         |         0         |         0         |         0         |   D0   |
+|         0         |         0         |         0         |         1         |   D1   |
+|         0         |         0         |         1         |         0         |   D2   |
+|         0         |         0         |         1         |         1         |   D3   |
+|         0         |         1         |         0         |         0         |   D4   |
+|         0         |         1         |         0         |         1         |   D5   |
+|         0         |         1         |         1         |         0         |   D6   |
+|         0         |         1         |         1         |         1         |   D7   |
+|         1         |         0         |         0         |         0         |   D8   |
+|         1         |         0         |         0         |         1         |   D9   |
+|         1         |         0         |         1         |         0         |   D10  |
+|         1         |         0         |         1         |         1         |   D11  |
+|         1         |         1         |         0         |         0         |   D12  |
+|         1         |         1         |         0         |         1         |   D13  |
+|         1         |         1         |         1         |         0         |   D14  |
+|         1         |         1         |         1         |         1         |   D15  |
+
+
+### 13. **4-Way 16-bit MUX**
+Un **4-Way 16-bit MUX**  tiene 4 entradas, cada una de 16 bits, y utiliza 2 líneas de selección para elegir cuál de las 4 entradas se dirige a la salida. La salida también es de 16 bits.
+
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/4way16bit.png?raw=true)
+
+| Selección \(S_1\) | Selección \(S_0\) | Salida (16 bits) |
+|:-----------------:|:-----------------:|:----------------:|
+|         0         |         0         |    Entrada 0     |
+|         0         |         1         |    Entrada 1     |
+|         1         |         0         |    Entrada 2     |
+|         1         |         1         |    Entrada 3     |
+
+### 14. **8-Way 16-bit MUX**
+Un **8-Way 16-bit MUX**  es un dispositivo que selecciona una de varias entradas de 16 bits y la envía a la salida, basada en las señales de selección. En este caso, el MUX tiene 8 entradas de 16 bits y 3 líneas de selección para elegir cuál de las 8 entradas se dirigirá a la salida:
+
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/16-bit%20MUX2.png?raw=true)
 
 | \(S_2\) | \(S_1\) | \(S_0\) | Entrada 0 | Entrada 1 | Entrada 2 | Entrada 3 | Entrada 4 | Entrada 5 | Entrada 6 | Entrada 7 | Salida (Seleccionada) |
 |:-------:|:-------:|:-------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:----------------------:|
@@ -186,7 +225,10 @@ Un **16-bit MUX**  es un dispositivo que selecciona una de varias entradas de 16
 |    1    |    1    |    0    |     -     |     -     |     -     |     -     |     -     |     -     |     D_6   |     -     |           D_6          |
 |    1    |    1    |    1    |     -     |     -     |     -     |     -     |     -     |     -     |     -     |     D_7   |           D_7          |
 
-
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)
+Imagenes:
+ - https://circuitdigest.com/sites/default/files/inlineimages/u/4-to-1-MUX-using-three-2-to-1-MUX.png
+ - https://www.electronicshub.org/wp-content/uploads/2021/04/Block-Diagram-of-16-to-1-Multiplexer.jpg
+ - https://d2vlcm61l7u1fs.cloudfront.net/media%2F268%2F26880fba-979c-4637-b9c2-d2da3aae7580%2FphpHS1AKM.png
