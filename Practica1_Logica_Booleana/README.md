@@ -113,6 +113,80 @@ Para cada par de bits individuales en una operación de 16-bit AND, la tabla de 
 |        1        |        0        |        0       |
 |        1        |        1        |        1       |
 
+### 9. **8-Way OR**
+Un **8-Way OR** es una operación que toma ocho entradas y las combina utilizando la puerta lógica OR. La salida será 1 si al menos una de las ocho entradas es 1:
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/8-Way%20Or.PNG?raw=true)
+
+| Entrada 0 | Entrada 1 | Entrada 2 | Entrada 3 | Entrada 4 | Entrada 5 | Entrada 6 | Entrada 7 | Salida |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:------:|
+|     0     |     0     |     0     |     0     |     0     |     0     |     0     |     0     |    0   |
+|     0     |     0     |     0     |     0     |     0     |     0     |     0     |     1     |    1   |
+|     0     |     0     |     0     |     0     |     0     |     0     |     1     |     0     |    1   |
+|     0     |     0     |     0     |     0     |     0     |     1     |     0     |     0     |    1   |
+|     0     |     0     |     0     |     0     |     1     |     0     |     0     |     0     |    1   |
+|     0     |     0     |     0     |     1     |     0     |     0     |     0     |     0     |    1   |
+|     0     |     0     |     1     |     0     |     0     |     0     |     0     |     0     |    1   |
+|     0     |     1     |     0     |     0     |     0     |     0     |     0     |     0     |    1   |
+|     1     |     0     |     0     |     0     |     0     |     0     |     0     |     0     |    1   |
+|     1     |     1     |     0     |     0     |     0     |     0     |     0     |     0     |    1   |
+|     1     |     0     |     1     |     0     |     0     |     0     |     0     |     0     |    1   |
+|     1     |     0     |     0     |     1     |     0     |     0     |     0     |     0     |    1   |
+|     1     |     0     |     0     |     0     |     1     |     0     |     0     |     0     |    1   |
+|     1     |     0     |     0     |     0     |     0     |     1     |     0     |     0     |    1   |
+|     1     |     0     |     0     |     0     |     0     |     0     |     1     |     0     |    1   |
+|     1     |     0     |     0     |     0     |     0     |     0     |     0     |     1     |    1   |
+|     1     |     1     |     1     |     1     |     1     |     1     |     1     |     1     |    1   |
+
+
+
+### 10. **4-Way DEMUX**
+Un **4-Way DEMUX**  un dispositivo digital que toma una única entrada y la dirige a una de cuatro posibles salidas, basándose en el valor de las líneas de selección.
+Se utilizan 2 líneas de selección para elegir a cuál de las 4 salidas se dirige la entrada:
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/4-Way%20Demux.PNG?raw=true)
+
+| Selección S1| Selección S0 | Salida 0 | Salida 1 | Salida 2 | Salida 2 |
+|:-----------:|:------------:|:--------:|:--------:|:--------:|:--------:|
+|      0      |       0      |     1    |    0     |     0    |    0     |
+|      0      |       1      |     0    |    1     |     0    |    0     |
+|      1      |       0      |     0    |    0     |     1    |    0     |
+|      1      |       1      |     0    |    0     |     0    |    1     |
+
+### 11. **8-Way DEMUX**
+Un **8-Way DEMUX** es un dispositivo digital que toma una única entrada y la distribuye a una de ocho posibles salidas, basada en el valor de las líneas de selección.
+se utiliza una configuración de 3 líneas de selección para elegir a cuál de las 8 salidas se dirige la entrada:
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/4-Way%20Demux.PNG?raw=true)
+
+| Selección S2 | Selección S1 | Selección S0 | Salida 0 | Salida 1 | Salida 2 | Salida 3 | Salida 4 | Salida 5 | Salida 6 | Salida 7 |
+|:------------:|:------------:|:------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|      0       |       0      |       0      |     1    |     0    |     0    |     0    |     0    |     0    |     0    |     0    |
+|      0       |       0      |       1      |     0    |     1    |     0    |     0    |     0    |     0    |     0    |     0    |
+|      0       |       1      |       0      |     0    |     0    |     1    |     0    |     0    |     0    |     0    |     0    |
+|      0       |       1      |       1      |     0    |     0    |     0    |     1    |     0    |     0    |     0    |     0    |
+|      1       |       0      |       0      |     0    |     0    |     0    |     0    |     1    |     0    |     0    |     0    |
+|      1       |       0      |       1      |     0    |     0    |     0    |     0    |     0    |     1    |     0    |     0    |
+|      1       |       1      |       0      |     0    |     0    |     0    |     0    |     0    |     0    |     1    |     0    |
+|      1       |       1      |       1      |     0    |     0    |     0    |     0    |     0    |     0    |     0    |     1    |
+
+### 12. **16-bit MUX**
+Un **16-bit MUX**  es un dispositivo que selecciona una de varias entradas de 16 bits y la envía a la salida, basada en las señales de selección. En este caso, el MUX tiene 8 entradas de 16 bits y 3 líneas de selección para elegir cuál de las 8 entradas se dirigirá a la salida:
+
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/4-Way%20Demux.PNG?raw=true)
+
+| \(S_2\) | \(S_1\) | \(S_0\) | Entrada 0 | Entrada 1 | Entrada 2 | Entrada 3 | Entrada 4 | Entrada 5 | Entrada 6 | Entrada 7 | Salida (Seleccionada) |
+|:-------:|:-------:|:-------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:----------------------:|
+|    0    |    0    |    0    |     D_0   |     -     |     -     |     -     |     -     |     -     |     -     |     -     |           D_0          |
+|    0    |    0    |    1    |     -     |     D_1   |     -     |     -     |     -     |     -     |     -     |     -     |           D_1          |
+|    0    |    1    |    0    |     -     |     -     |     D_2   |     -     |     -     |     -     |     -     |     -     |           D_2          |
+|    0    |    1    |    1    |     -     |     -     |     -     |     D_3   |     -     |     -     |     -     |     -     |           D_3          |
+|    1    |    0    |    0    |     -     |     -     |     -     |     -     |     D_4   |     -     |     -     |     -     |           D_4          |
+|    1    |    0    |    1    |     -     |     -     |     -     |     -     |     -     |     D_5   |     -     |     -     |           D_5          |
+|    1    |    1    |    0    |     -     |     -     |     -     |     -     |     -     |     -     |     D_6   |     -     |           D_6          |
+|    1    |    1    |    1    |     -     |     -     |     -     |     -     |     -     |     -     |     -     |     D_7   |           D_7          |
+
+
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)
