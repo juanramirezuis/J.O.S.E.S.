@@ -2,7 +2,9 @@
 ## Práctica 1: Logica Booleana.
 
 En este taller se construyeron las compuertas logica, lo que nos dio como resultado un conjunto de chips basicos.
+
 ### Preguntas
+
 1. ¿Que consideraciones importantes debe tener en cuenta para trabajar con Nand2Tetris?:
    
    Para trabajar con Nand2Tetris, es fundamental tener una comprensión básica de conceptos de computación, como puertas lógicas y arquitectura de computadoras, y seguir el curso en orden, ya que cada capítulo se
