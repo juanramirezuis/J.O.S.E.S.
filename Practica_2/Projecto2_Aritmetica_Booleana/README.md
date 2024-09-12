@@ -29,13 +29,13 @@ La operación de suma binaria de dos entradas realizada por un Half Adder se rea
 
 (1+1=0 | 1) Si A y B son ambos 1, la suma S es 0 y el acarreo C es 1.
 
-Representación del Half Adder en la tabla de la verdad:
+- **Representación del Half Adder en la tabla de la verdad**
 
 
 ![image](https://github.com/user-attachments/assets/37dfc838-6761-4e67-a5f2-5eccfcdfa5b5)
 
 
-Su esquema e implementación:
+- **Su esquema e implementación**
 
 ![image](https://github.com/user-attachments/assets/b690a5cd-ee31-4971-82f5-5e0ffe497589)
 
@@ -55,13 +55,13 @@ Si el resultado de la suma de A, B y Cin es 2, la suma S es 0 y el acarreo Carry
 
 Si el resultado de la suma de A, B y Cin es 3, la suma S es 1 y el acarreo Carry es 1.
 
-Representación del Full Adder en la tabla de la verdad:
+- **Representación del Full Adder en la tabla de la verdad**
 
 
 ![image](https://github.com/user-attachments/assets/4b58a09b-97af-4c90-b7f3-d08bfc253c76)
 
 
-Su esquema e implementación:
+- **Su esquema e implementación**
 
 ![image](https://github.com/user-attachments/assets/7394a3a8-7a8c-479b-b44c-fa2ea7c229dd)
 
@@ -84,7 +84,7 @@ El acarreo de salida de un sumador completo se pasa como acarreo de entrada al s
 
 ### 16-Bit Incrementer
 
-El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada in del Inc16 se conecta directamente al primer operando del Add16, mientras que el segundo operando `b` se configura para representar el valor binario de 1, con b[0] establecido en true (o 1) y los demás bits en false (o 0). Al sumar el número de entrada in con este valor binario de 1, el Add16 produce la suma, la cual es emitida en la salida out. De esta manera, Inc16 incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
+El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada in del Inc16 se conecta directamente al primer operando del Add16, mientras que el segundo operando b se configura para representar el valor binario de 1, con b[0] establecido en true (o 1) y los demás bits en false (o 0). Al sumar el número de entrada in con este valor binario de 1, el Add16 produce la suma, la cual es emitida en la salida out. De esta manera, Inc16 incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
