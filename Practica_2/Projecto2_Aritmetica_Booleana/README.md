@@ -79,7 +79,10 @@ El bit de Suma es parte del resultado final en esa posición, mientras que el bi
 
 - **Implementacion del 16Bit Adder**
 
-![image](https://github.com/user-attachments/assets/e04d8e95-a5a9-4239-a602-5c4e2e781300)
+![image](https://github.com/user-attachments/assets/4a413ed3-4e09-4aaf-ba95-f6f082ad0059)
+![image](https://github.com/user-attachments/assets/65d28cb3-b28c-478d-b8d8-be74faf40229)
+
+
 
 ### 16-Bit Incrementer
 
