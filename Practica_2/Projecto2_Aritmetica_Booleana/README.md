@@ -22,8 +22,11 @@ Este tipo de circuito toma dos entradas binarias, A y B, y produce dos salidas, 
 La operación de suma binaria de dos entradas realizada por un Half Adder se realiza de la siguiente manera:
 
 (0+0=0 | 0) Si A y B son ambos 0, la suma S es 0 y el acarreo C es 0.
+
 (1+0=1 | 0) Si A es 1 y B es 0, la suma S es 1 y el acarreo C es 0.
+
 (0+1=1 | 0) Si A es 0 y B es 1, la suma S es 1 y el acarreo C es 0.
+
 (1+1=0 | 1) Si A y B son ambos 1, la suma S es 0 y el acarreo C es 1.
 
 Representación del Half Adder en la tabla de la verdad:
@@ -45,8 +48,11 @@ Este tipo de circuito toma tres entradas binarias, A, B y un acarreo de entrada 
 La operación de suma binaria realizada por un Full Adder se realiza de la siguiente manera:
 
 Se suma A y B y se agrega el acarreo de entrada Cin. Si el resultado es 0, la suma S es 0 y el acarreo Carry es 0.
+
 Si el resultado de la suma de A, B y Cin es 1, la suma S es 1 y el acarreo Carry es 0.
+
 Si el resultado de la suma de A, B y Cin es 2, la suma S es 0 y el acarreo Carry es 1.
+
 Si el resultado de la suma de A, B y Cin es 3, la suma S es 1 y el acarreo Carry es 1.
 
 Representación del Half Adder en la tabla de la verdad:
@@ -57,7 +63,7 @@ Representación del Half Adder en la tabla de la verdad:
 
 Su esquema e implementación:
 
-![image](https://github.com/user-attachments/assets/79707b3f-12de-4110-9674-2113de2a258e)
+![image](https://github.com/user-attachments/assets/7394a3a8-7a8c-479b-b44c-fa2ea7c229dd)
 
 
 En este circuito, se combinan dos circuitos sumadores simples (half adder) utilizando una compuerta OR. El primer sumador simple tiene dos entradas binarias de un solo bit, A y B. Como sabemos, el sumador simple genera dos salidas: Suma y Acarreo. La salida 'Suma' del primer sumador será la primera entrada del segundo sumador simple, y la salida 'Acarreo' del primer sumador será la segunda entrada del segundo sumador simple. El segundo sumador simple generará nuevamente 'Suma' y 'Acarreo'. El resultado final del circuito sumador completo (full adder) será el bit de 'Suma'. Para obtener la salida final del 'Acarreo', conectamos las salidas de 'Acarreo' del primer y del segundo sumador a una compuerta OR. El resultado de la compuerta OR será el acarreo final del circuito sumador completo.
