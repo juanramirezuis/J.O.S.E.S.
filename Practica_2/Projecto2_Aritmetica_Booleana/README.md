@@ -14,15 +14,20 @@ aca se pone el objetivo
 
 ### Half Adder Circuit
 
-Un sumador simple (half adder) es un circuito de lógica digital que realiza la suma binaria de dos números binarios de un solo bit. Tiene dos entradas, A y B, y dos salidas, 
-SUMA (SUM) y ACARREO (CARRY). La salida SUMA es el bit menos significativo (LSB) del resultado, mientras que la salida ACARREO es el bit más significativo (MSB) del resultado, 
-lo que indica si hubo un acarreo durante la suma de las dos entradas. El sumador simple se puede implementar utilizando compuertas básicas como las compuertas XOR y AND.
+Un circuito digital Half Adder es un tipo de circuito lógico¹ que se utiliza en la aritmética digital² para realizar la suma binaria de dos bits. Este tipo de circuito toma dos entradas binarias, A y B, y produce dos salidas, una llamada “suma” (S) y otra llamada “acarreo” (Carry).
 
-La salida SUMA es el bit menos significativo (LSB) del resultado, que es el resultado de la operación XOR entre las dos entradas A y B.
-La compuerta XOR implementa la operación de suma para dígitos binarios, donde se genera un “1” en la salida SUMA solo cuando una de las entradas es “1”.
+![image](https://github.com/user-attachments/assets/3b10d451-85e3-4cbf-9782-daf391a662db)
 
-La salida ACARREO es el bit más significativo (MSB) del resultado, lo que indica si hubo un acarreo durante la suma de las dos entradas.
-La salida ACARREO es el resultado de la operación AND entre las dos entradas A y B. La compuerta AND genera un “1” en la salida ACARREO solo cuando ambas entradas son “1”.
+La operación de suma binaria de dos entradas realizada por un Half Adder se realiza de la siguiente manera:
+
+(0+0=0 | 0) Si A y B son ambos 0, la suma S es 0 y el acarreo C es 0.
+(1+0=1 | 0) Si A es 1 y B es 0, la suma S es 1 y el acarreo C es 0.
+(0+1=1 | 0) Si A es 0 y B es 1, la suma S es 1 y el acarreo C es 0.
+(1+1=0 | 1) Si A y B son ambos 1, la suma S es 0 y el acarreo C es 1.
+
+Representación del Half Adder en la tabla de la verdad, su esquema y implementación del dibujo del circuito:
+![image](https://github.com/user-attachments/assets/f9eb511a-aa42-4e8a-bbe1-ba95ebe8f7a3)
+
 
 - **Tabla de verdad Half Adder**
 
@@ -67,6 +72,7 @@ sumador completo de 16 bits, en donde su primera entrada sera la misma entrada d
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)
+ - https://medium.com/@massin.laaouaj/half-adder-vs-full-adder-estructura-de-computadores-d3bbee8dbd5c#:~:text=Un%20circuito%20digital%20Half%20Adder,%E2%80%9Cacarreo%E2%80%9D%20(Cout).
 Imagenes:
  - https://circuitdigest.com/sites/default/files/inlineimages/u/4-to-1-MUX-using-three-2-to-1-MUX.png
  - https://www.electronicshub.org/wp-content/uploads/2021/04/Block-Diagram-of-16-to-1-Multiplexer.jpg
