@@ -55,7 +55,7 @@ Si el resultado de la suma de A, B y Cin es 2, la suma S es 0 y el acarreo Carry
 
 Si el resultado de la suma de A, B y Cin es 3, la suma S es 1 y el acarreo Carry es 1.
 
-Representación del Half Adder en la tabla de la verdad:
+Representación del Full Adder en la tabla de la verdad:
 
 
 ![image](https://github.com/user-attachments/assets/4b58a09b-97af-4c90-b7f3-d08bfc253c76)
@@ -73,21 +73,21 @@ El MSB (bit más significativo) está representado por el bit final de 'Acarreo'
 
 ### 16-Bit Adder
 
-Un sumador de 16 bits basado en sumadores completos se encarga de sumar dos números binarios de 16 bits, procesándolos bit a bit. Cada número binario se compone de 16 dígitos, y el sumador utiliza un sumador completo (full adder) para cada par de bits. El proceso comienza en el bit menos significativo (bit 0) de ambos números, donde el sumador completo toma los bits de entrada A y B, más un posible acarreo inicial (generalmente 0), y calcula dos salidas: un bit de Suma y un Acarreo.
+El chip Add16 es un sumador de 16 bits que realiza la suma de dos números binarios de 16 bits en complemento a dos. 
+Este chip utiliza una cadena de 16 sumadores completos, cada uno de los cuales maneja una posición de bit específica en los números de entrada. Cada sumador completo toma dos bits de las entradas `a` y `b`, junto con un bit de acarreo de entrada, y produce un bit de suma y un bit de acarreo de salida. 
 
-El bit de Suma es parte del resultado final en esa posición, mientras que el bit de Acarreo se transfiere al siguiente sumador completo, que sumará el siguiente par de bits (en la posición 1) junto con el acarreo recibido. Este proceso se repite hasta que los 16 bits han sido sumados. En la posición final (bit 15), el sumador completo produce un bit de suma para el bit más significativo y un acarreo final que puede ser utilizado para futuras operaciones si es necesario. El sumador de 16 bits divide la suma en una cadena de sumadores completos, donde cada uno gestiona la suma de un bit y transfiere el acarreo a la siguiente posición, garantizando una suma correcta de los 16 bits.
+![image](https://github.com/user-attachments/assets/4a413ed3-4e09-4aaf-ba95-f6f082ad0059)
+
+El acarreo de salida de un sumador completo se pasa como acarreo de entrada al siguiente sumador en la cadena. Este proceso se repite para cada bit, desde el menos significativo hasta el más significativo. Al final, los bits de suma de cada sumador forman el resultado final de la suma de los dos números de 16 bits. Es importante destacar que, aunque el último sumador completo genera un bit de acarreo final, este acarreo más significativo se ignora en el diseño del chip, por lo que el resultado es un vector de 16 bits que refleja la suma de las dos entradas.
 
 - **Implementacion del 16Bit Adder**
 
-![image](https://github.com/user-attachments/assets/4a413ed3-4e09-4aaf-ba95-f6f082ad0059)
 ![image](https://github.com/user-attachments/assets/65d28cb3-b28c-478d-b8d8-be74faf40229)
-
 
 
 ### 16-Bit Incrementer
 
-Este circuito lo que hara es que la entrada que se ingrese, la cual sera un numero de 16 bits, se le suma 1 (un bit) por lo que su implementacion es bastante sencilla ya que se usa un 
-sumador completo de 16 bits, en donde su primera entrada sera la misma entrada del incrementador, y la segunda entrada sera el numero 1 en formato de 16 bits
+El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada `in` del `Inc16` se conecta directamente al primer operando del Add16, mientras que el segundo operando `b` se configura para representar el valor binario de 1, con `b[0]` establecido en `true` (o 1) y los demás bits en `false` (o 0). Al sumar el número de entrada `in` con este valor binario de 1, el `Add16` produce la suma, la cual es emitida en la salida `out`. De esta manera, `Inc16` incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
