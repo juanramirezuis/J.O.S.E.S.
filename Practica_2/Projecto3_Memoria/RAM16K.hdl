@@ -13,5 +13,16 @@ CHIP RAM16K {
     OUT out[16];
 
     PARTS:
-    //// Replace this comment with your code.
+    //DMuxear la señal de carga en 4 bloques de RAM mas pequeños en base 
+    // a los 2 bits mas significativos de la direccion
+    DMux4Way(in=load, sel=address[0..1], a=loadA, b=loadB, c=loadC, d=loadD);
+
+    //Cada RAM (4096 16-bits) es seeleccionada por los otros 12 bits de la direccion
+    RAM4K(in=in, load=loadA, address=address[2..13], out=ramAOut);
+    RAM4K(in=in, load=loadB, address=address[2..13], out=ramBOut);
+    RAM4K(in=in, load=loadC, address=address[2..13], out=ramCOut);
+    RAM4K(in=in, load=loadD, address=address[2..13], out=ramDOut);
+
+    //Muxear las salidas de los bloques de RAM para seleccionar el correcto
+    Mux4Way16(a=ramAOut, b=ramBOut, c=ramCOut, d=ramDOut, sel= address[0..1], out=out);
 }
