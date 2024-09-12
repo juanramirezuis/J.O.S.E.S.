@@ -14,40 +14,57 @@ aca se pone el objetivo
 
 ### Half Adder Circuit
 
-Un circuito digital Half Adder es un tipo de circuito lógico¹ que se utiliza en la aritmética digital² para realizar la suma binaria de dos bits. Este tipo de circuito toma dos entradas binarias, A y B, y produce dos salidas, una llamada “suma” (S) y otra llamada “acarreo” (Carry).
+Un circuito digital Half Adder es un tipo de circuito lógico que se utiliza en la aritmética digital para realizar la suma binaria de dos bits. 
+Este tipo de circuito toma dos entradas binarias, A y B, y produce dos salidas, una llamada “suma” (S) y otra llamada “acarreo” (Carry).
 
 ![image](https://github.com/user-attachments/assets/3b10d451-85e3-4cbf-9782-daf391a662db)
 
 La operación de suma binaria de dos entradas realizada por un Half Adder se realiza de la siguiente manera:
 
 (0+0=0 | 0) Si A y B son ambos 0, la suma S es 0 y el acarreo C es 0.
+
 (1+0=1 | 0) Si A es 1 y B es 0, la suma S es 1 y el acarreo C es 0.
+
 (0+1=1 | 0) Si A es 0 y B es 1, la suma S es 1 y el acarreo C es 0.
+
 (1+1=0 | 1) Si A y B son ambos 1, la suma S es 0 y el acarreo C es 1.
 
-Representación del Half Adder en la tabla de la verdad, su esquema y implementación del dibujo del circuito:
-![image](https://github.com/user-attachments/assets/f9eb511a-aa42-4e8a-bbe1-ba95ebe8f7a3)
+Representación del Half Adder en la tabla de la verdad:
 
 
-- **Tabla de verdad Half Adder**
+![image](https://github.com/user-attachments/assets/37dfc838-6761-4e67-a5f2-5eccfcdfa5b5)
 
-  ![image](https://github.com/user-attachments/assets/34bb882b-d637-4dff-991d-fe7964fa91bc)
 
-- **Implentacion Half Adder y Diagrama**
- 
-  ![image](https://github.com/user-attachments/assets/47c16b4e-0daf-4b47-b708-53e558a6e8ca)
+Su esquema e implementación:
+
+![image](https://github.com/user-attachments/assets/b690a5cd-ee31-4971-82f5-5e0ffe497589)
+
 
 ### Full Adder Circuit
 
-El sumador simple (half adder) se utiliza para sumar solo dos números. Para superar esta limitación, se desarrolló el sumador completo (full adder). El sumador completo se utiliza para sumar tres números binarios de 1 bit: A, B y el acarreo C. El sumador completo tiene tres entradas y dos salidas, es decir, suma y acarreo.
+Al igual que el Half Adder el Full Adder también es un tipo de circuito lógico que se utiliza en la aritmética digital para realizar la suma binaria de tres bits. 
+Este tipo de circuito toma tres entradas binarias, A, B y un acarreo de entrada (Cin), y produce dos salidas, una llamada “suma” (S) y otra llamada “acarreo” (Carry).
 
-- **Tabla de verdad Full Adder**
+La operación de suma binaria realizada por un Full Adder se realiza de la siguiente manera:
 
-![image](https://github.com/user-attachments/assets/c7adffc4-9f09-48bc-a4b5-897737b1d457)
+Se suma A y B y se agrega el acarreo de entrada Cin. Si el resultado es 0, la suma S es 0 y el acarreo Carry es 0.
 
-- **Implementacion Full Adder y Diagrama**
+Si el resultado de la suma de A, B y Cin es 1, la suma S es 1 y el acarreo Carry es 0.
 
-![image](https://github.com/user-attachments/assets/9a1b611d-b6ea-4594-b631-35890d4a1b1a)
+Si el resultado de la suma de A, B y Cin es 2, la suma S es 0 y el acarreo Carry es 1.
+
+Si el resultado de la suma de A, B y Cin es 3, la suma S es 1 y el acarreo Carry es 1.
+
+Representación del Half Adder en la tabla de la verdad:
+
+
+![image](https://github.com/user-attachments/assets/4b58a09b-97af-4c90-b7f3-d08bfc253c76)
+
+
+Su esquema e implementación:
+
+![image](https://github.com/user-attachments/assets/7394a3a8-7a8c-479b-b44c-fa2ea7c229dd)
+
 
 En este circuito, se combinan dos circuitos sumadores simples (half adder) utilizando una compuerta OR. El primer sumador simple tiene dos entradas binarias de un solo bit, A y B. Como sabemos, el sumador simple genera dos salidas: Suma y Acarreo. La salida 'Suma' del primer sumador será la primera entrada del segundo sumador simple, y la salida 'Acarreo' del primer sumador será la segunda entrada del segundo sumador simple. El segundo sumador simple generará nuevamente 'Suma' y 'Acarreo'. El resultado final del circuito sumador completo (full adder) será el bit de 'Suma'. Para obtener la salida final del 'Acarreo', conectamos las salidas de 'Acarreo' del primer y del segundo sumador a una compuerta OR. El resultado de la compuerta OR será el acarreo final del circuito sumador completo.
 
@@ -62,7 +79,10 @@ El bit de Suma es parte del resultado final en esa posición, mientras que el bi
 
 - **Implementacion del 16Bit Adder**
 
-![image](https://github.com/user-attachments/assets/e04d8e95-a5a9-4239-a602-5c4e2e781300)
+![image](https://github.com/user-attachments/assets/4a413ed3-4e09-4aaf-ba95-f6f082ad0059)
+![image](https://github.com/user-attachments/assets/65d28cb3-b28c-478d-b8d8-be74faf40229)
+
+
 
 ### 16-Bit Incrementer
 
