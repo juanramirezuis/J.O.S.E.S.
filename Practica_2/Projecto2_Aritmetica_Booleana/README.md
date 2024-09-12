@@ -66,10 +66,7 @@ Su esquema e implementación:
 ![image](https://github.com/user-attachments/assets/7394a3a8-7a8c-479b-b44c-fa2ea7c229dd)
 
 
-En este circuito, se combinan dos circuitos sumadores simples (half adder) utilizando una compuerta OR. El primer sumador simple tiene dos entradas binarias de un solo bit, A y B. Como sabemos, el sumador simple genera dos salidas: Suma y Acarreo. La salida 'Suma' del primer sumador será la primera entrada del segundo sumador simple, y la salida 'Acarreo' del primer sumador será la segunda entrada del segundo sumador simple. El segundo sumador simple generará nuevamente 'Suma' y 'Acarreo'. El resultado final del circuito sumador completo (full adder) será el bit de 'Suma'. Para obtener la salida final del 'Acarreo', conectamos las salidas de 'Acarreo' del primer y del segundo sumador a una compuerta OR. El resultado de la compuerta OR será el acarreo final del circuito sumador completo.
-
-El MSB (bit más significativo) está representado por el bit final de 'Acarreo'
-
+El chip FullAdder realiza la suma de tres bits: dos bits de entrada (a y b) y un bit de acarreo de entrada (c). Utiliza dos sumadores parciales (HalfAdder) para calcular la suma y los acarreos intermedios, y luego combina los acarreos generados con una puerta lógica OR para obtener el acarreo final. Este diseño permite al FullAdder manejar la suma binaria con acarreo, una función esencial en la aritmética digital.
 
 ### 16-Bit Adder
 
@@ -87,7 +84,7 @@ El acarreo de salida de un sumador completo se pasa como acarreo de entrada al s
 
 ### 16-Bit Incrementer
 
-El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada `in` del `Inc16` se conecta directamente al primer operando del Add16, mientras que el segundo operando `b` se configura para representar el valor binario de 1, con `b[0]` establecido en `true` (o 1) y los demás bits en `false` (o 0). Al sumar el número de entrada `in` con este valor binario de 1, el `Add16` produce la suma, la cual es emitida en la salida `out`. De esta manera, `Inc16` incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
+El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada in del Inc16 se conecta directamente al primer operando del Add16, mientras que el segundo operando `b` se configura para representar el valor binario de 1, con b[0] establecido en true (o 1) y los demás bits en false (o 0). Al sumar el número de entrada in con este valor binario de 1, el Add16 produce la suma, la cual es emitida en la salida out. De esta manera, Inc16 incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
