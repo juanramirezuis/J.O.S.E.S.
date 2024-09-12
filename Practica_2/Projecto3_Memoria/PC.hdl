@@ -14,5 +14,12 @@ CHIP PC {
     OUT out[16];
     
     PARTS:
-    //// Replace this comment with your code.
+
+    Inc16(in=valorActual, out=valorIncrementado); //Incrementa el valor actual del Register en 1
+
+    Mux16(a=valorActual, b=valorIncrementado, sel=inc, out=incMuxOut); //Escoge entre el valor actual o incrementado
+    Mux16(a=incMuxOut , b=in, sel=load, out=loadMuxOut); //Escoge entre la salida del mux de incremento o el valor de entrada
+    Mux16(a=loadMuxOut, b[0...15]=false, sel=reset, out=resetMuxOut); //Escoge entre la salida del mux de carga o resetear
+
+    Register(in=resetMuxOut, load=true, out=out, out=valorActual); //Almacena el resultado final(incrementar, cargar o resetear)
 }
