@@ -1,5 +1,5 @@
 # J.O.S.E.S.
-## Práctica 2: Proyecto 3: Memoria
+## Práctica 2: Proyecto 3: Logica Secuencial
 
 ### 1. **Bit**
 El objetivo del **Bit** es almacenar un único valor binario (0 o 1) en la memoria y dejar que ese valor se actualice o se mantenga en función de una señal de control de entrada. Esto forma la base del 
