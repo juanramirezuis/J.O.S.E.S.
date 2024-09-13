@@ -1,27 +1,19 @@
 # J.O.S.E.S.
-## Práctica 2: Proyecto3_Memoria
+## Práctica 2: Proyecto 3: Memoria
 
-### 1. **NOT**
-La puerta lógica NOT invierte el valor de entrada. Si la entrada es 1, la salida es 0, y viceversa.
+### 1. **Bit**
+El objetivo del **Bit** es almacenar un único valor binario (0 o 1) en la memoria y dejar que ese valor se actualice o se mantenga en función de una señal de control de entrada. Esto forma la base del 
+almacenamiento en memoria mediante el uso de un flip-flop (DFF) como elemento principal. El DFF emite continuamente el valor almacenado y, cuando se lo indica la señal de control, actualiza su valor en función de una 
+nueva entrada. Esto hace posible el funcionamiento de la memoria dinámica, lo que permite que el bit actúe como un bloque de construcción fundamental para unidades de memoria más complejas, como los registros y la RAM.
 
-![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/Not.JPG?raw=true)
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_2/Projecto3_Memoria/Imagenes/Bit.png)
 
-| Entrada (A) | Salida (¬A) |
-|:-----------:|:-----------:|
-|      0      |      1      |
-|      1      |      0      |
+### 2. **Register**
+El objetivo del **Register** es almacenar un valor de 16 bits, lo que permite el almacenamiento y la recuperación de datos binarios en cantidades mayores que las que proporciona un solo bit. 
+Funciona apartir de el uso de circuitos de muchos bits, donde cada bit almacena una parte del valor de varios bits. El registro permite que todo el valor de 16 bits se actualice al mismo tiempo o que permanezca sin 
+cambios según la señal de control (carga). Los registros son fundamentales para almacenar datos, direcciones e instrucciones, lo que permite el manejo de datos de estilo binario de manera rapida y eficiente.
 
-### 2. **AND**
-La puerta lógica **AND** da una salida de 1 solo si ambas entradas son 1. En cualquier otro caso, la salida es 0.
-
-![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica1_Logica_Booleana/Imagenes/AND.png?raw=true)
-
-| Entrada (A) | Entrada (B) | Salida (A AND B) |
-|:-----------:|:-----------:|:----------------:|
-|      0      |      0      |        0         |
-|      0      |      1      |        0         |
-|      1      |      0      |        0         |
-|      1      |      1      |        1         |
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_2/Projecto3_Memoria/Imagenes/Block-diagram-of-4-bit-PIPO-Shift-register-using-D-Flip-Flop.png)
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
