@@ -16,7 +16,7 @@ aca ponen el objetivo
 
 
 
-2. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
+## 2. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
    
    La lógica aritmética (lógica combinacional) realiza operaciones como la suma, la resta y la manipulación bit a bit, y sus resultados dependen únicamente de las entradas actuales, sin recordar estados anteriores.
    Calcula los resultados instantáneamente, sin depender de entradas anteriores o de una señal de reloj. Por el contrario, la lógica secuencial almacena información y sus resultados dependen tanto de las entradas
@@ -24,7 +24,7 @@ aca ponen el objetivo
    utiliza en componentes como la unidad lógica aritmética (ALU) para cálculos inmediatos, la lógica secuencial es esencial para elementos de memoria como interruptores de flotador, registros y contadores, que
    rastrean el estado a lo largo del tiempo.
 
-**PREGUNTA BONUS**
+## PREGUNTA BONUS
    ¿Qué tipo de unidades aritmético lógicas existen?:
 
    Las unidades aritmético-lógicas (ALU) son componentes fundamentales en la arquitectura de una CPU. Estas unidades realizan operaciones aritméticas (como suma, resta) y lógicas (como AND, OR) sobre datos.
