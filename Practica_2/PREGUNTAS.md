@@ -5,17 +5,28 @@
 ## 1. ¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?
 
 ### Objetivo del Proyecto 2 (Lógica Aritmética):
-Este proyecto se centra en diseñar y construir componentes fundamentales para la aritmética y la lógica digital, por lo cual su objetivo es desarrollar circuitos que realicen operaciones básicas, como la suma de bits y la manipulación de números de 16 bits, y luego integrar estos componentes en una Unidad Aritmética y Lógica (ALU) capaz de realizar diversas operaciones aritméticas y lógicas. Esto incluye la creación de sumadores simples y avanzados, un incrementador de 16 bits y, finalmente, una ALU que pueda ejecutar y gestionar diferentes tipos de operaciones según las instrucciones de control.
+Este proyecto se centra en diseñar y construir componentes fundamentales para la aritmética y la lógica digital, por lo cual su objetivo es desarrollar circuitos que realicen operaciones básicas, como la suma de 
+bits y la manipulación de números de 16 bits, y luego integrar estos componentes en una Unidad Aritmética y Lógica (ALU) capaz de realizar diversas operaciones aritméticas y lógicas. Esto incluye la creación de 
+sumadores simples y avanzados, un incrementador de 16 bits y, finalmente, una ALU que pueda ejecutar y gestionar diferentes tipos de operaciones según las instrucciones de control.
 
 **Desarrollo:**
 
-Para alcanzar este objetivo, primero diseñamos circuitos básicos como el Half Adder y el Full Adder, que son los bloques fundamentales para realizar sumas de bits. Luego se construyo un sumador de 16 bits (Add16) y un incrementador de 16 bits (Inc16) utilizando estos adders básicos. Posteriormente, integramos estos componentes en una ALU que pueda realizar una variedad de operaciones aritméticas y lógicas, como suma, resta, AND y OR. La ALU debia incluir una lógica de control para seleccionar la operación deseada y proporcionar resultados correctos, así como señales de carry y zero según corresponda. Finalmente, realizamos pruebas de cada componente y del sistema completo para garantizar que todo funcione correctamente y cumpla con los requisitos especificados.
+Para alcanzar este objetivo, primero diseñamos circuitos básicos como el Half Adder y el Full Adder, que son los bloques fundamentales para realizar sumas de bits. Luego se construyo un sumador de 16 bits (Add16) y 
+un incrementador de 16 bits (Inc16) utilizando estos adders básicos. Posteriormente, integramos estos componentes en una ALU que pueda realizar una variedad de operaciones aritméticas y lógicas, como suma, resta, 
+AND y OR. La ALU debia incluir una lógica de control para seleccionar la operación deseada y proporcionar resultados correctos, así como señales de carry y zero según corresponda. Finalmente, realizamos pruebas de 
+cada componente y del sistema completo para garantizar que todo funcione correctamente y cumpla con los requisitos especificados.
 
 
 ### Objetivo del Proyecto 3 (Lógica Secuencial):
-aca ponen el objetivo
 
+Este proyecto tiene como objetivo construir la unidad de memoria del computador, la cual es indispensable para almacenar y acceder a datos durante la ejecución de programas. A través del diseño de 
+componentes secuenciales como registros, RAM de diferentes tamaños y el contador de programa (PC).
 
+**Desarrollo:**
+
+Para el desarrollo de este proyecto, se implementaron varios componentes secuencialesde memoria, comenzando con un bit utilizando flip-flops, luego un registro de 16 bits para almacenas palabras completas de datos, 
+y posteriormente se desarrollan módulos de RAM de diferentes tamaños (RAM8, RAM64, RAM512, etc.) que permiten almacenar datos en direcciones específica, y finalmente, se construye el contador de programa (PC), que 
+gestiona el flujo de ejecución de instrucciones. Todos estos componentes son diseñados en .hdl y se prueban en el simulador de hardware para comprobar que todo funcione y cumpla con los requisitos especificados.
 
 ## 2. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
    
