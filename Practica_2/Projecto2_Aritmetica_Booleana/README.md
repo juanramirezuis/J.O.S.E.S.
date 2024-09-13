@@ -3,11 +3,6 @@
 
 En este taller se construyeron las compuertas logica, lo que nos dio como resultado un conjunto de chips basicos.
 
-### Objetivo
-aca se pone el objetivo
-
-
-
 # Construyendo y entendiendo la Unidad Logica Aritmetica (ALU)
 
 ## Explicacion codigo para la creacion de los circuitos
