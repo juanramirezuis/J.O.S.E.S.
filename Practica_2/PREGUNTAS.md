@@ -1,17 +1,31 @@
 # J.O.S.E.S.
-## Práctica 2
 
-### Preguntas
+## Práctica 2: Proyectos 2 y 3.
 
-1. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
+## 1. ¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?
+
+### Objetivo del Proyecto 2 (Lógica Aritmética):
+Este proyecto se centra en diseñar y construir componentes fundamentales para la aritmética y la lógica digital, por lo cual su objetivo es desarrollar circuitos que realicen operaciones básicas, como la suma de bits y la manipulación de números de 16 bits, y luego integrar estos componentes en una Unidad Aritmética y Lógica (ALU) capaz de realizar diversas operaciones aritméticas y lógicas. Esto incluye la creación de sumadores simples y avanzados, un incrementador de 16 bits y, finalmente, una ALU que pueda ejecutar y gestionar diferentes tipos de operaciones según las instrucciones de control.
+
+**Desarrollo:**
+Para alcanzar este objetivo, primero diseñamos circuitos básicos como el Half Adder y el Full Adder, que son los bloques fundamentales para realizar sumas de bits. Luego se construyo un sumador de 16 bits (Add16) y un incrementador de 16 bits (Inc16) utilizando estos adders básicos. Posteriormente, integramos estos componentes en una ALU que pueda realizar una variedad de operaciones aritméticas y lógicas, como suma, resta, AND y OR. La ALU debia incluir una lógica de control para seleccionar la operación deseada y proporcionar resultados correctos, así como señales de carry y zero según corresponda. Finalmente, realizamos pruebas de cada componente y del sistema completo para garantizar que todo funcione correctamente y cumpla con los requisitos especificados.
+
+
+### Objetivo del Proyecto 3 (Lógica Secuencial):
+aca ponen el objetivo
+
+
+
+2. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
    
    La lógica aritmética (lógica combinacional) realiza operaciones como la suma, la resta y la manipulación bit a bit, y sus resultados dependen únicamente de las entradas actuales, sin recordar estados anteriores.
    Calcula los resultados instantáneamente, sin depender de entradas anteriores o de una señal de reloj. Por el contrario, la lógica secuencial almacena información y sus resultados dependen tanto de las entradas
    actuales como de los estados anteriores. Por lo general, está controlada por una señal de reloj, que dicta cuándo se deben actualizar los valores almacenados (memoria). Mientras que la lógica aritmética se
    utiliza en componentes como la unidad lógica aritmética (ALU) para cálculos inmediatos, la lógica secuencial es esencial para elementos de memoria como interruptores de flotador, registros y contadores, que
    rastrean el estado a lo largo del tiempo.
-   
-2. ¿Qué tipo de unidades aritmético lógicas existen?:
+
+**PREGUNTA BONUS**
+   ¿Qué tipo de unidades aritmético lógicas existen?:
 
    Las unidades aritmético-lógicas (ALU) son componentes fundamentales en la arquitectura de una CPU. Estas unidades realizan operaciones aritméticas (como suma, resta) y lógicas (como AND, OR) sobre datos.
    
