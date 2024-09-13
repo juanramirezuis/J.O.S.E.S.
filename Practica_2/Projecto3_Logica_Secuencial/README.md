@@ -51,26 +51,47 @@ La RAM8 es una unidad de memoria que puede almacenar 8 palabras de 16 bits cada 
 **1. Componentes principales de la RAM8:**
 
 **•	8 registros de 16 bits:** Cada registro puede almacenar una palabra de 16 bits. Esto significa que la RAM8 puede almacenar un total de 8 palabras.
+
 **•	Multiplexores (MUX):** Los multiplexores son usados para seleccionar cuál de los registros debe leer o escribir, dependiendo de la dirección que se reciba.
+
 **•	Decodificador:** Este se usa para habilitar el registro correcto durante una operación de escritura.
 
+
 **2. Entradas de la RAM8:**
+
 **•	in[16]:** Entrada de datos de 16 bits. Es el valor que quieres almacenar en uno de los registros de la RAM.
+
 **•	address[3]:** Es la dirección de 3 bits que determina cuál de los 8 registros se va a seleccionar para leer o escribir. Un valor de 3 bits puede representar un total de 23=82^3 = 823=8 combinaciones, por lo que se pueden direccionar los 8 registros.
+
 **•	load:** Esta señal es un bit que indica si se debe almacenar (cargar) el valor de in en el registro seleccionado. Si load = 1, el valor de la entrada in se almacenará en el registro correspondiente a la dirección dada por address.
+
 **•	clk (clock):** La señal de reloj controla cuándo se debe realizar la operación de escritura en el registro seleccionado.
+
+
 **3. Salida de la RAM8:**
+
 **•	out[16]:** La salida es de 16 bits y corresponde al valor almacenado en el registro seleccionado por la dirección address.
-**5. Funcionamiento detallado:**
+
+**4. Funcionamiento detallado:**
+
 **•	Lectura:** Cuando la señal de load es 0, la RAM8 no cambia el valor almacenado en sus registros. La salida será el valor almacenado en el registro indicado por address.
+
 **•	Escritura:** Si la señal load es 1, la RAM8 toma el valor de in y lo almacena en el registro indicado por la dirección address. Esto sucede al pulso del reloj (en la transición de bajo a alto de la señal clk).
+
 **•	Decodificación y selección de registro:**
-o	Para la operación de escritura, el decodificador toma los 3 bits de la dirección y habilita uno de los 8 registros. El valor de in se almacenará solo en el registro habilitado.
-o	Para la operación de lectura, un multiplexor selecciona el valor almacenado en el registro que corresponde a la dirección, y lo saca por la señal out.
-**6. Explicación del HDL:**
+
+**-**Para la operación de escritura, el decodificador toma los 3 bits de la dirección y habilita uno de los 8 registros. El valor de in se almacenará solo en el registro habilitado.
+
+**-**Para la operación de lectura, un multiplexor selecciona el valor almacenado en el registro que corresponde a la dirección, y lo saca por la señal out.
+
+**5. Explicación del HDL:**
+
 **•	Registros:** Se definen 8 registros de 16 bits con la instrucción Register.
+
 **•	DMux8Way:** Este desmultiplexor toma la señal load y, dependiendo de la dirección (address), habilita la escritura en uno de los 8 registros.
+
 **•	Mux8Way16:** El multiplexor de 8 vías selecciona uno de los 8 registros para leer su contenido, de acuerdo a la dirección address, y envía el valor a la salida out.
+
 
 La RAM64 es una extensión de la RAM8, diseñada para almacenar 64 palabras de 16 bits cada una. En el contexto de Nand2Tetris, la RAM64 se construye utilizando 8 instancias de RAM8. Aquí te explico en detalle cómo funciona y cómo se implementa en HDL (Hardware Description Language).
 1. Componentes principales de la RAM64:
