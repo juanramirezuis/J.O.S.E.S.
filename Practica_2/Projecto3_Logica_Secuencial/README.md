@@ -47,3 +47,7 @@ Es una memoria RAM de 16K (16384) direcciones, donde cada dirección almacena un
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [From NAND To Tetris, Part 5: RAM, Memory, and Sequential Logic](https://www.youtube.com/watch?v=3xIQDyutc2Y&list=PLu6SHDdOToSdD4-c9nZX2Qu3ZXnNFocOH&index=8)
  - [NAND To Tetris 5a: Creating RAM and Memory lab](https://www.youtube.com/watch?v=lo54MEu7u9A&list=PLu6SHDdOToSdD4-c9nZX2Qu3ZXnNFocOH&index=9)
+
+Imagenes:
+ - https://nand2tetris-hdl.github.io/img/pc.png
+ - https://nand2tetris-hdl.github.io/img/ram8.png
