@@ -46,7 +46,7 @@ Es una memoria RAM de 16K (16384) direcciones, donde cada dirección almacena un
 ![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_2/Projecto3_Logica_Secuencial/Imagenes/ram16k.png?raw=true)
 
 ### 6. **RAM8**
-La RAM8 es una unidad de memoria que puede almacenar 8 palabras de 16 bits cada una. Está construida a partir de registros de 16 bits y se utiliza en sistemas de cómputo para almacenar datos temporalmente. Aquí te explico en detalle cómo funciona y cómo se implementa en el contexto de Nand2Tetris usando el lenguaje de descripción de hardware (HDL):
+La RAM8 es una unidad de memoria que puede almacenar 8 palabras de 16 bits cada una. Está construida a partir de registros de 16 bits y se utiliza en sistemas de cómputo para almacenar datos temporalmente. Su funcionamiento viene descrito de la siguiente manera:
 
 **1. Componentes principales de la RAM8:**
 
