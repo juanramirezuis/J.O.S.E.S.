@@ -1,5 +1,5 @@
 # J.O.S.E.S.
-## Práctica 1: Logica Booleana.
+## Práctica 2: Logica Booleana.
 
 En este taller se construyeron las compuertas logica, lo que nos dio como resultado un conjunto de chips basicos.
 
