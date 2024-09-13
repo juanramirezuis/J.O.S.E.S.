@@ -86,6 +86,70 @@ El acarreo de salida de un sumador completo se pasa como acarreo de entrada al s
 
 El chip Inc16 se utiliza para incrementar un número binario de 16 bits en 1. Para lograr esto, el Inc16 emplea el chip Add16, un sumador de 16 bits. En su funcionamiento, la entrada in del Inc16 se conecta directamente al primer operando del Add16, mientras que el segundo operando b se configura para representar el valor binario de 1, con b[0] establecido en true (o 1) y los demás bits en false (o 0). Al sumar el número de entrada in con este valor binario de 1, el Add16 produce la suma, la cual es emitida en la salida out. De esta manera, Inc16 incrementa el valor de entrada en 1 y proporciona el resultado actualizado en su salida.
 
+### ALU
+
+Este proyecto implementa una Unidad Aritmética Lógica (ALU) que realiza operaciones aritméticas y lógicas sobre dos entradas de 16 bits, basándose en varios bits de control. La ALU es capaz de ejecutar diversas funciones, como suma, resta, operaciones lógicas, y manipulación de señales de salida.
+
+## Funciones soportadas
+
+La ALU puede realizar las siguientes operaciones, según los bits de control:
+
+- Suma: `x + y`
+- Resta: `x - y`, `y - x`
+- Operaciones lógicas: `x & y`, `x | y`
+- Manipulación de las entradas y salida:
+  - **Zero**: Establece una entrada en 0.
+  - **Negación**: Aplica la operación NOT bit a bit.
+  - **Incremento/Decremento**: `x + 1`, `y + 1`, `x - 1`, `y - 1`
+  - **Salida**: La salida puede ser negada.
+  
+Adicionalmente, la ALU produce dos salidas de estado:
+- `zr`: Se activa cuando la salida es 0.
+- `ng`: Se activa cuando la salida es negativa (menor que 0 en complemento a dos).
+
+## Bits de Control
+
+La operación de la ALU está controlada por los siguientes bits de entrada:
+
+- `zx`: Si es 1, la entrada `x` se pone a 0.
+- `nx`: Si es 1, la entrada `x` se invierte (NOT bit a bit).
+- `zy`: Si es 1, la entrada `y` se pone a 0.
+- `ny`: Si es 1, la entrada `y` se invierte (NOT bit a bit).
+- `f`: Si es 1, la operación es suma (`x + y`); si es 0, es una operación AND (`x & y`).
+- `no`: Si es 1, la salida se invierte (NOT bit a bit).
+
+## Entradas y Salidas
+
+### Entradas:
+- `x[16]`: Entrada de 16 bits.
+- `y[16]`: Entrada de 16 bits.
+- `zx, nx, zy, ny, f, no`: Bits de control.
+
+### Salidas:
+- `out[16]`: Resultado de la operación (16 bits).
+- `zr`: Bit de estado, se activa si `out` es 0.
+- `ng`: Bit de estado, se activa si `out` es negativo.
+
+## Descripción de funcionamiento
+
+1. **Inicialización de Entradas**:
+   - Si `zx = 1`, la entrada `x` se pone a 0.
+   - Si `nx = 1`, la entrada `x` se invierte.
+   - Si `zy = 1`, la entrada `y` se pone a 0.
+   - Si `ny = 1`, la entrada `y` se invierte.
+
+2. **Operación**:
+   - Si `f = 1`, se realiza la suma de `x + y`.
+   - Si `f = 0`, se realiza la operación lógica AND entre `x` e `y`.
+
+3. **Negación de la Salida**:
+   - Si `no = 1`, el resultado se invierte.
+
+4. **Cálculo de Salidas de Estado**:
+   - Si la salida `out = 0`, el bit `zr` se activa.
+   - Si la salida es negativa (en complemento a dos), el bit `ng` se activa.
+
+
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [[From NAND To Tetris - Logic Gates Lab](https://www.youtube.com/watch?v=Mzy0RG9Z1Ak&t=78s)](https://youtu.be/Wl53tFc5WYQ?si=89A2tz64oT-TPEhA)
