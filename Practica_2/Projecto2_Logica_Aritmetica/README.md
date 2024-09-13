@@ -90,60 +90,60 @@ Este proyecto implementa una Unidad Aritmética Lógica (ALU) que realiza operac
 
 La ALU puede realizar las siguientes operaciones, según los bits de control:
 
-- Suma: `x + y`
-- Resta: `x - y`, `y - x`
-- Operaciones lógicas: `x & y`, `x | y`
-- Manipulación de las entradas y salida:
-  - **Zero**: Establece una entrada en 0.
-  - **Negación**: Aplica la operación NOT bit a bit.
-  - **Incremento/Decremento**: `x + 1`, `y + 1`, `x - 1`, `y - 1`
-  - **Salida**: La salida puede ser negada.
+Suma: x + y
+Resta: x - y, y - x
+Operaciones lógicas: x & y, x | y
+Manipulación de las entradas y salida:
+  **Zero**: Establece una entrada en 0.
+  **Negación**: Aplica la operación NOT bit a bit.
+  **Incremento/Decremento**: x + 1, y + 1, x - 1, y - 1
+  **Salida**: La salida puede ser negada.
   
 Adicionalmente, la ALU produce dos salidas de estado:
-- `zr`: Se activa cuando la salida es 0.
-- `ng`: Se activa cuando la salida es negativa (menor que 0 en complemento a dos).
+zr: Se activa cuando la salida es 0.
+ng: Se activa cuando la salida es negativa (menor que 0 en complemento a dos).
 
 ## Bits de Control
 
 La operación de la ALU está controlada por los siguientes bits de entrada:
 
-- `zx`: Si es 1, la entrada `x` se pone a 0.
-- `nx`: Si es 1, la entrada `x` se invierte (NOT bit a bit).
-- `zy`: Si es 1, la entrada `y` se pone a 0.
-- `ny`: Si es 1, la entrada `y` se invierte (NOT bit a bit).
-- `f`: Si es 1, la operación es suma (`x + y`); si es 0, es una operación AND (`x & y`).
-- `no`: Si es 1, la salida se invierte (NOT bit a bit).
+`zx`: Si es 1, la entrada `x` se pone a 0.
+`nx`: Si es 1, la entrada `x` se invierte (NOT bit a bit).
+`zy`: Si es 1, la entrada `y` se pone a 0.
+`ny`: Si es 1, la entrada `y` se invierte (NOT bit a bit).
+`f`: Si es 1, la operación es suma (`x + y`); si es 0, es una operación AND (`x & y`).
+`no`: Si es 1, la salida se invierte (NOT bit a bit).
 
 ## Entradas y Salidas
 
 ### Entradas:
-- `x[16]`: Entrada de 16 bits.
-- `y[16]`: Entrada de 16 bits.
-- `zx, nx, zy, ny, f, no`: Bits de control.
+`x[16]`: Entrada de 16 bits.
+`y[16]`: Entrada de 16 bits.
+`zx, nx, zy, ny, f, no`: Bits de control.
 
 ### Salidas:
-- `out[16]`: Resultado de la operación (16 bits).
-- `zr`: Bit de estado, se activa si `out` es 0.
-- `ng`: Bit de estado, se activa si `out` es negativo.
+`out[16]`: Resultado de la operación (16 bits).
+`zr`: Bit de estado, se activa si `out` es 0.
+`ng`: Bit de estado, se activa si `out` es negativo.
 
 ## Descripción de funcionamiento
 
 1. **Inicialización de Entradas**:
-   - Si `zx = 1`, la entrada `x` se pone a 0.
-   - Si `nx = 1`, la entrada `x` se invierte.
-   - Si `zy = 1`, la entrada `y` se pone a 0.
-   - Si `ny = 1`, la entrada `y` se invierte.
+   Si `zx = 1`, la entrada `x` se pone a 0.
+   Si `nx = 1`, la entrada `x` se invierte.
+   Si `zy = 1`, la entrada `y` se pone a 0.
+   Si `ny = 1`, la entrada `y` se invierte.
 
 2. **Operación**:
-   - Si `f = 1`, se realiza la suma de `x + y`.
-   - Si `f = 0`, se realiza la operación lógica AND entre `x` e `y`.
+   Si `f = 1`, se realiza la suma de `x + y`.
+   Si `f = 0`, se realiza la operación lógica AND entre `x` e `y`.
 
 3. **Negación de la Salida**:
-   - Si `no = 1`, el resultado se invierte.
+   Si `no = 1`, el resultado se invierte.
 
 4. **Cálculo de Salidas de Estado**:
-   - Si la salida `out = 0`, el bit `zr` se activa.
-   - Si la salida es negativa (en complemento a dos), el bit `ng` se activa.
+   Si la salida `out = 0`, el bit `zr` se activa.
+   Si la salida es negativa (en complemento a dos), el bit `ng` se activa.
 
 
 ## Bibliografia
