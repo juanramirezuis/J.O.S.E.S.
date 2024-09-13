@@ -34,6 +34,8 @@ Es una memoria RAM de 4K (4096) direcciones, donde cada dirección almacena un d
 - Cada uno de los bloques RAM512 se encarga de manejar una sub-sección de 512. Los 9 bits menos significativos de la dirección determinan qué valor específico dentro de ese bloque se lee o escribe.
 - El multiplexor Mux8Way16 selecciona cuál de los 8 bloques de RAM proporciona el valor de salida, según los 3 bits más significativos de la dirección.
 
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_2/Projecto3_Logica_Secuencial/Imagenes/ram4k.jpg?raw=true)
+
 ### 5. **RAM16K**
 Es una memoria RAM de 16K (16384) direcciones, donde cada dirección almacena un valor de 16 bits. Su funcionamiento es: 
 
@@ -50,4 +52,5 @@ Esta practica fue resuelta apoyandonos del siguiente material:
 
 Imagenes:
  - https://nand2tetris-hdl.github.io/img/pc.png
+ - https://youtu.be/yk8OCAmytHM?si=h3O2IdQ7-irpckD6
  - https://nand2tetris-hdl.github.io/img/ram8.png
