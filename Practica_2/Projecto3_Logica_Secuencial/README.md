@@ -80,9 +80,9 @@ La RAM8 es una unidad de memoria que puede almacenar 8 palabras de 16 bits cada 
 
 **•	Decodificación y selección de registro:**
 
-**-**Para la operación de escritura, el decodificador toma los 3 bits de la dirección y habilita uno de los 8 registros. El valor de in se almacenará solo en el registro habilitado.
+Para la operación de escritura, el decodificador toma los 3 bits de la dirección y habilita uno de los 8 registros. El valor de in se almacenará solo en el registro habilitado.
 
-**-**Para la operación de lectura, un multiplexor selecciona el valor almacenado en el registro que corresponde a la dirección, y lo saca por la señal out.
+Para la operación de lectura, un multiplexor selecciona el valor almacenado en el registro que corresponde a la dirección, y lo saca por la señal out.
 
 **5. Explicación del HDL:**
 
