@@ -92,58 +92,112 @@ La RAM8 es una unidad de memoria que puede almacenar 8 palabras de 16 bits cada 
 
 **•	Mux8Way16:** El multiplexor de 8 vías selecciona uno de los 8 registros para leer su contenido, de acuerdo a la dirección address, y envía el valor a la salida out.
 
+### 7. **RAM64**
 
 La RAM64 es una extensión de la RAM8, diseñada para almacenar 64 palabras de 16 bits cada una. En el contexto de Nand2Tetris, la RAM64 se construye utilizando 8 instancias de RAM8. Aquí te explico en detalle cómo funciona y cómo se implementa en HDL (Hardware Description Language).
+
 1. Componentes principales de la RAM64:
+
 •	8 bloques de RAM8: La RAM64 está formada por 8 unidades de RAM8, donde cada bloque almacena 8 palabras de 16 bits.
+
 •	Multiplexores (MUX): Se utilizan multiplexores para seleccionar de cuál bloque de RAM8 leer o escribir.
+
 •	Decodificador: Un decodificador decide cuál de las RAM8 debe habilitarse para una operación de escritura.
+
 2. Entradas de la RAM64:
+
 •	in[16]: Entrada de datos de 16 bits, el valor que deseas almacenar en la RAM64.
+
 •	address[6]: Una dirección de 6 bits que se usa para seleccionar tanto el bloque de RAM8 como el registro dentro de ese bloque. La dirección de 6 bits permite acceder a 26=642^6 = 6426=64 posiciones de memoria.
-o	Los primeros 3 bits de address seleccionan cuál de las 8 RAM8 se debe usar (por eso tenemos 8 bloques).
-o	Los últimos 3 bits de address seleccionan cuál de los 8 registros dentro del bloque de RAM8 se debe leer o escribir.
+
+-Los primeros 3 bits de address seleccionan cuál de las 8 RAM8 se debe usar (por eso tenemos 8 bloques).
+
+-Los últimos 3 bits de address seleccionan cuál de los 8 registros dentro del bloque de RAM8 se debe leer o escribir.
+
 •	load: Señal de 1 bit que indica si se debe cargar (escribir) el valor de in en la posición seleccionada de la RAM64.
+
 •	clk (clock): Señal de reloj que sincroniza las operaciones de escritura en los registros.
+
 3. Salida de la RAM64:
+
 •	out[16]: La salida es de 16 bits y contiene el valor almacenado en la posición de memoria seleccionada por address.
+
 4. Funcionamiento detallado:
+
 •	Decodificación de la dirección:
-o	Los primeros 3 bits de address (bits más significativos) seleccionan cuál de las 8 RAM8 manejará la operación. Esta selección se hace mediante un desmultiplexor de 8 vías (DMux8Way).
-o	Los últimos 3 bits de address se pasan a cada una de las RAM8 para que seleccionen cuál de los registros dentro de la RAM8 debe manejar la operación de lectura o escritura.
-•	Escritura: Si la señal load es 1, la RAM64 toma el valor de in y lo almacena en el registro seleccionado. Solo el bloque de RAM8 correspondiente (según los 3 bits más significativos) podrá recibir el valor de in y cargarlo en el registro correcto (seleccionado por los 3 bits menos significativos).
+
+-Los primeros 3 bits de address (bits más significativos) seleccionan cuál de las 8 RAM8 manejará la operación. Esta selección se hace mediante un desmultiplexor de 8 vías (DMux8Way).
+
+-Los últimos 3 bits de address se pasan a cada una de las RAM8 para que seleccionen cuál de los registros dentro de la RAM8 debe manejar la operación de lectura o escritura.
+
+•	Escritura: Si la señal load es 1, la RAM64 toma el valor de in y lo almacena en el registro seleccionado. Solo el bloque de RAM8 correspondiente (según los 3 bits más significativos) 
+
+podrá recibir el valor de in y cargarlo en el registro correcto (seleccionado por los 3 bits menos significativos).
+
 •	Lectura: Cuando load = 0, la RAM64 no cambia ningún valor almacenado. El valor de salida out será el valor almacenado en el registro seleccionado por la dirección.
+
 5. Explicación del HDL:
+
 •	RAM8: Se instancian 8 bloques de RAM8, cada uno manejando un conjunto de 8 palabras de 16 bits.
+
 •	address[3..5]: Los bits 3, 4 y 5 del address (los 3 bits menos significativos) se pasan a las RAM8 para seleccionar qué registro dentro de cada RAM8 debe operar.
+
 •	DMux8Way: Este desmultiplexor toma la señal load y, dependiendo de los bits 0, 1 y 2 de address (los 3 bits más significativos), habilita la carga en uno de los 8 bloques de RAM8.
+
 •	Mux8Way16: Este multiplexor selecciona la salida del bloque de RAM8 que corresponde a los bits 0, 1 y 2 de address.
-•	La RAM512 es una unidad de memoria que almacena 512 palabras de 16 bits cada una, y se construye como una extensión de la RAM64. En el contexto de Nand2Tetris, se logra utilizando 8 instancias de RAM64, de forma similar a cómo se construye la RAM64 a partir de bloques de RAM8.
-•	1. Componentes principales de la RAM512:
+
+### 8. **RAM512**
+
+La RAM512 es una unidad de memoria que almacena 512 palabras de 16 bits cada una, y se construye como una extensión de la RAM64. En el contexto de Nand2Tetris, se logra utilizando 8 instancias de RAM64, de forma similar a cómo se construye la RAM64 a partir de bloques de RAM8.
+
+1. Componentes principales de la RAM512:
+
 •	8 bloques de RAM64: La RAM512 está compuesta por 8 bloques de RAM64. Cada bloque almacena 64 palabras de 16 bits, lo que da un total de 8×64=5128 \times 64 = 5128×64=512 palabras.
+
 •	Multiplexores (MUX): Se usan multiplexores para seleccionar el bloque de RAM64 adecuado de donde leer o escribir.
+
 •	Decodificador: Un desmultiplexor selecciona cuál de las 8 RAM64 debe habilitarse para la operación de escritura.
-•	2. Entradas de la RAM512:
+
+2. Entradas de la RAM512:
+
 •	in[16]: Entrada de datos de 16 bits, el valor que se quiere almacenar en la RAM512.
+
 •	address[9]: Dirección de 9 bits que indica qué posición de memoria acceder en la RAM512.
-o	Los primeros 3 bits del address se usan para seleccionar uno de los 8 bloques de RAM64.
-o	Los últimos 6 bits del address se usan para seleccionar cuál registro dentro del bloque de RAM64 debe ser leído o escrito.
+
+-Los primeros 3 bits del address se usan para seleccionar uno de los 8 bloques de RAM64.
+
+-Los últimos 6 bits del address se usan para seleccionar cuál registro dentro del bloque de RAM64 debe ser leído o escrito.
+
 •	load: Señal de control de 1 bit que indica si se debe almacenar el valor de in en la posición de memoria seleccionada.
+
 •	clk (clock): Señal de reloj que sincroniza la operación de escritura en los registros.
+
 •	3. Salida de la RAM512:
+
 •	out[16]: La salida es de 16 bits y contiene el valor almacenado en la posición de memoria seleccionada.
+
 •	4. Funcionamiento detallado:
+
 •	Decodificación de la dirección:
-o	Los primeros 3 bits de address (bits más significativos) seleccionan cuál de los 8 bloques de RAM64 debe manejar la operación de lectura o escritura. Esto se realiza mediante un desmultiplexor de 8 vías (DMux8Way).
-o	Los últimos 6 bits de address (bits menos significativos) se pasan a los bloques de RAM64. Estos 6 bits se dividen en dos partes:
-	Los 3 bits más significativos de esta parte seleccionan cuál de los 8 registros dentro del bloque RAM64 debe ser utilizado (función de RAM8 dentro de la RAM64).
-	Los 3 bits menos significativos se pasan dentro de los bloques de RAM8.
+
+-Los primeros 3 bits de address (bits más significativos) seleccionan cuál de los 8 bloques de RAM64 debe manejar la operación de lectura o escritura. Esto se realiza mediante un desmultiplexor de 8 vías (DMux8Way).
+
+-Los últimos 6 bits de address (bits menos significativos) se pasan a los bloques de RAM64. Estos 6 bits se dividen en dos partes:
+Los 3 bits más significativos de esta parte seleccionan cuál de los 8 registros dentro del bloque RAM64 debe ser utilizado (función de RAM8 dentro de la RAM64).
+Los 3 bits menos significativos se pasan dentro de los bloques de RAM8.
+
 •	Escritura: Si load es 1, el valor en in se almacena en la posición de memoria correspondiente. Solo el bloque de RAM64 seleccionado y el registro dentro de ese bloque reciben el valor de in y lo almacenan.
+
 •	Lectura: Si load es 0, se mantiene el valor de la memoria. La salida out será el valor almacenado en el registro correspondiente a la dirección address.
+
 5. Explicación del HDL:
+
 •	RAM64: Se instancian 8 bloques de RAM64, cada uno manejando 64 palabras de 16 bits.
+
 •	address[3..8]: Los bits 3 a 8 de la dirección se pasan a los bloques RAM64, los cuales gestionan internamente la selección de los registros adecuados.
+
 •	DMux8Way: Este desmultiplexor toma la señal load y, dependiendo de los bits 0, 1 y 2 de address, habilita la escritura en uno de los 8 bloques de RAM64.
+
 •	Mux8Way16: El multiplexor selecciona la salida del bloque RAM64 correspondiente según los bits 0, 1 y 2 de address, que determinan de cuál bloque de RAM64 se obtendrá la salida.
 
 
