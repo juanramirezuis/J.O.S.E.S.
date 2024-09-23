@@ -11,16 +11,16 @@ El lenguaje de máquina es fundamental para definir la arquitectura computaciona
    
 Desde nuestro punto de vista, la arquitectura computacional, la arquitectura de software y la arquitectura del sistema representan tres niveles de diseño que, aunque relacionados, abordan aspectos diferentes de un sistema tecnológico. La arquitectura computacional establece las bases del hardware, la arquitectura de software organiza cómo funcionará el software sobre ese hardware, y la arquitectura del sistema define cómo todos los componentes, tanto físicos como lógicos, interactúan en conjunto para crear un sistema cohesionado. Cada una tiene su relevancia, pero abarcan distintos niveles de complejidad y abstracción.
 
-La **arquitectura computacional** se enfoca en el diseño del hardware, principalmente cómo interactúan los componentes físicos de una computadora como el procesador, la memoria y los buses. Es el "esqueleto" que define qué instrucciones puede ejecutar la máquina y cómo se comunican los componentes internos, esta es la capa más fundamental porque define los límites de lo que es posible en términos de procesamiento y rendimiento. 
+**La arquitectura computacional** se enfoca en el diseño del hardware, principalmente cómo interactúan los componentes físicos de una computadora como el procesador, la memoria y los buses. Es el "esqueleto" que define qué instrucciones puede ejecutar la máquina y cómo se comunican los componentes internos, esta es la capa más fundamental porque define los límites de lo que es posible en términos de procesamiento y rendimiento. 
 
-La **arquitectura de software** se centra en la organización del software, cómo se estructura el código, los módulos y cómo interactúan entre sí dentro del sistema, aquí entra en juego el diseño de patrones y principios que aseguren que el software sea escalable, mantenible y eficiente, esto es crucial para garantizar que las aplicaciones no solo funcionen bien dentro de una computadora específica, sino que también puedan adaptarse y evolucionar a medida que cambian las necesidades.
+**La arquitectura de software** se centra en la organización del software, cómo se estructura el código, los módulos y cómo interactúan entre sí dentro del sistema, aquí entra en juego el diseño de patrones y principios que aseguren que el software sea escalable, mantenible y eficiente, esto es crucial para garantizar que las aplicaciones no solo funcionen bien dentro de una computadora específica, sino que también puedan adaptarse y evolucionar a medida que cambian las necesidades.
 
-La **arquitectura del sistema** integra tanto el hardware como el software, pero lo hace desde una perspectiva más amplia, abarcando la infraestructura general, como servidores, redes y la interacción entre varios subsistemas, creemos que esta es la visión más global, donde se consideran aspectos de seguridad, redundancia y escalabilidad a nivel de todo el ecosistema.
+**La arquitectura del sistema** integra tanto el hardware como el software, pero lo hace desde una perspectiva más amplia, abarcando la infraestructura general, como servidores, redes y la interacción entre varios subsistemas, creemos que esta es la visión más global, donde se consideran aspectos de seguridad, redundancia y escalabilidad a nivel de todo el ecosistema.
 
 
 
 ## PREGUNTA BONUS
-  Como informático o computista: ¿La arquitectura computacional o la arquitectura del sistema no tiene en cuenta igualmente la arquitectura de software? Justifique su respuesta.
+  **Como informático o computista: ¿La arquitectura computacional o la arquitectura del sistema no tiene en cuenta igualmente la arquitectura de software? Justifique su respuesta.**
 
 Consideramos que tanto la arquitectura computacional como la arquitectura del sistema toman en cuenta, aunque de manera diferente, la arquitectura de software, pero no en la misma medida ni con el mismo enfoque.
 
