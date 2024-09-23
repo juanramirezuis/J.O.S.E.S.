@@ -2,92 +2,34 @@
 
 ## Práctica 2: Proyectos 2 y 3.
 
-## 1. ¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa que debe hacer para desarrollarlo?
+## 1.	¿Por qué el lenguaje de máquina es importante para definir la arquitectura computacional?
 
-### Objetivo del Proyecto 2 (Lógica Aritmética):
-Este proyecto se centra en diseñar y construir componentes fundamentales para la aritmética y la lógica digital, por lo cual su objetivo es desarrollar circuitos que realicen operaciones básicas, como la suma de 
-bits y la manipulación de números de 16 bits, y luego integrar estos componentes en una Unidad Aritmética y Lógica (ALU) capaz de realizar diversas operaciones aritméticas y lógicas. Esto incluye la creación de 
-sumadores simples y avanzados, un incrementador de 16 bits y, finalmente, una ALU que pueda ejecutar y gestionar diferentes tipos de operaciones según las instrucciones de control.
-
-**Desarrollo:**
-
-Para alcanzar este objetivo, primero diseñamos circuitos básicos como el Half Adder y el Full Adder, que son los bloques fundamentales para realizar sumas de bits. Luego se construyo un sumador de 16 bits (Add16) y 
-un incrementador de 16 bits (Inc16) utilizando estos adders básicos. Posteriormente, integramos estos componentes en una ALU que pueda realizar una variedad de operaciones aritméticas y lógicas, como suma, resta, 
-AND y OR. La ALU debia incluir una lógica de control para seleccionar la operación deseada y proporcionar resultados correctos, así como señales de carry y zero según corresponda. Finalmente, realizamos pruebas de 
-cada componente y del sistema completo para garantizar que todo funcione correctamente y cumpla con los requisitos especificados.
+El lenguaje de máquina es crucial para definir la arquitectura computacional porque es el único lenguaje que el procesador puede entender y ejecutar directamente, sin necesidad de traducción. Está compuesto por instrucciones codificadas en secuencias de bits que el hardware interpreta para realizar operaciones específicas, como mover datos o realizar cálculos. La arquitectura de un procesador se diseña alrededor del conjunto de instrucciones que puede ejecutar, conocido como ISA (Instruction Set Architecture), lo que determina cómo interactúa con la memoria y otros dispositivos. Además, la relación entre el lenguaje de máquina y la arquitectura permite optimizar el rendimiento del sistema, ya que las instrucciones están diseñadas para aprovechar las capacidades del hardware de manera eficiente. También, el conjunto de instrucciones asegura la compatibilidad del software con la arquitectura, afectando su portabilidad entre diferentes plataformas. Por lo tanto, el lenguaje de máquina es esencial para definir cómo se estructura y funciona un sistema computacional a nivel más básico.
 
 
-### Objetivo del Proyecto 3 (Lógica Secuencial):
-
-Este proyecto tiene como objetivo construir la unidad de memoria del computador, la cual es indispensable para almacenar y acceder a datos durante la ejecución de programas. A través del diseño de 
-componentes secuenciales como registros, RAM de diferentes tamaños y el contador de programa (PC).
-
-**Desarrollo:**
-
-Para el desarrollo de este proyecto, se implementaron varios componentes secuencialesde memoria, comenzando con un bit utilizando flip-flops, luego un registro de 16 bits para almacenas palabras completas de datos, 
-y posteriormente se desarrollan módulos de RAM de diferentes tamaños (RAM8, RAM64, RAM512, etc.) que permiten almacenar datos en direcciones específica, y finalmente, se construye el contador de programa (PC), que 
-gestiona el flujo de ejecución de instrucciones. Todos estos componentes son diseñados en .hdl y se prueban en el simulador de hardware para comprobar que todo funcione y cumpla con los requisitos especificados.
-
-## 2. Explique las principales diferencias entre la lógica aritmética y la lógica secuencial:
+## 2.	¿Qué diferencia ven entre arquitectura computacional, arquitectura de software y arquitectura del sistema? Justifique su respuesta.
    
-   La lógica aritmética (lógica combinacional) realiza operaciones como la suma, la resta y la manipulación bit a bit, y sus resultados dependen únicamente de las entradas actuales, sin recordar estados anteriores.
-   Calcula los resultados instantáneamente, sin depender de entradas anteriores o de una señal de reloj. Por el contrario, la lógica secuencial almacena información y sus resultados dependen tanto de las entradas
-   actuales como de los estados anteriores. Por lo general, está controlada por una señal de reloj, que dicta cuándo se deben actualizar los valores almacenados (memoria). Mientras que la lógica aritmética se
-   utiliza en componentes como la unidad lógica aritmética (ALU) para cálculos inmediatos, la lógica secuencial es esencial para elementos de memoria como interruptores de flotador, registros y contadores, que
-   rastrean el estado a lo largo del tiempo.
+   Desde mi punto de vista, la arquitectura computacional, la arquitectura de software y la arquitectura del sistema representan tres niveles de diseño que, aunque relacionados, abordan aspectos diferentes de un sistema tecnológico.
+
+La **arquitectura computacional** se enfoca en el diseño del hardware, principalmente cómo interactúan los componentes físicos de una computadora como el procesador, la memoria y los buses. Es el "esqueleto" que define qué instrucciones puede ejecutar la máquina y cómo se comunican los componentes internos. A mi parecer, esta es la capa más fundamental porque define los límites de lo que es posible en términos de procesamiento y rendimiento. 
+
+Por otro lado, la **arquitectura de software** se centra en la organización del software, cómo se estructura el código, los módulos y cómo interactúan entre sí dentro del sistema. Aquí entra en juego el diseño de patrones y principios que aseguren que el software sea escalable, mantenible y eficiente. Desde mi perspectiva, esto es crucial para garantizar que las aplicaciones no solo funcionen bien dentro de una computadora específica, sino que también puedan adaptarse y evolucionar a medida que cambian las necesidades.
+
+Finalmente, la **arquitectura del sistema** integra tanto el hardware como el software, pero lo hace desde una perspectiva más amplia, abarcando la infraestructura general, como servidores, redes y la interacción entre varios subsistemas. Creo que esta es la visión más global, donde se consideran aspectos de seguridad, redundancia y escalabilidad a nivel de todo el ecosistema.
+
+En resumen, la arquitectura computacional establece las bases del hardware, la arquitectura de software organiza cómo funcionará el software sobre ese hardware, y la arquitectura del sistema define cómo todos los componentes, tanto físicos como lógicos, interactúan en conjunto para crear un sistema cohesionado. Cada una tiene su relevancia, pero abarcan distintos niveles de complejidad y abstracción.
+
 
 ## PREGUNTA BONUS
-   ¿Qué tipo de unidades aritmético lógicas existen?:
+  Como informático o computista: ¿La arquitectura computacional o la arquitectura del sistema no tiene en cuenta igualmente la arquitectura de software? Justifique su respuesta.
 
-   Las unidades aritmético-lógicas (ALU) son componentes fundamentales en la arquitectura de una CPU. Estas unidades realizan operaciones aritméticas (como suma, resta) y lógicas (como AND, OR) sobre datos.
-   
-   La ALU se compone básicamente de: Circuito Operacional, Registros de Entradas, Registro Acumulador y un Registro de Estados, conjunto de registros que hacen posible la realización de cada una de las operaciones.
-   
-   La mayoría de las acciones de la computadora son realizadas por la ALU. La ALU toma datos de los registros del procesador. Estos datos son procesados y los resultados de esta operación se almacenan en los            registros de salida de la ALU. Otros mecanismos mueven datos entre estos registros y la memoria.
-   
-   Una unidad de control controla a la ALU, al ajustar los circuitos que le señala a la ALU qué operaciones realizar.
-   
-   Algunos tipos de ALU que existen, en función de su complejidad y diseño:
-   
-      1. ALU Combinacional:
-         Esta es la forma más básica de ALU, donde la salida depende sólo de las entradas actuales, sin almacenar ningún estado. No tiene registros internos.
-         Características:
-            Realiza operaciones simples como suma, resta, AND, OR, XOR.
-            Se usa en sistemas básicos y pequeños dispositivos embebidos.
-            
-      2. ALU con Acumulador:
-         Utiliza un registro llamado "acumulador" para almacenar uno de los operandos y el resultado de las operaciones.
-         Características:
-            Es más eficiente para realizar múltiples operaciones sucesivas sobre un solo valor.
-            Se emplea en procesadores de arquitectura antigua o sencilla.
-            
-      3. ALU Compleja o Multioperativa:
-         Es capaz de realizar operaciones más avanzadas, como multiplicaciones y divisiones, además de operaciones lógicas y aritméticas básicas.
-         Características:
-            Integra instrucciones aritméticas avanzadas (como multiplicaciones de enteros de gran tamaño).
-            Se usa en procesadores modernos para mejorar la eficiencia en cálculos matemáticos complejos.
-            
-      4. ALU Escalar:
-         Realiza una única operación sobre un par de operandos a la vez.
-         Características:
-            Adecuada para procesadores sencillos que no requieren ejecutar múltiples instrucciones en paralelo.
-            
-      5. ALU Vectorial o SIMD (Single Instruction, Multiple Data):
-         Capaz de realizar operaciones en paralelo sobre múltiples datos, es decir, un solo conjunto de instrucciones se ejecuta en varios datos simultáneamente.
-         Características:
-            Usada en procesadores gráficos (GPU) o sistemas orientados al procesamiento de grandes volúmenes de datos (como cálculos científicos).
-            Mejora el rendimiento en tareas que requieren cálculos masivos en paralelo.
-            
-      6. ALU Especializada:
-         Diseñada para aplicaciones específicas como procesamiento de señales digitales (DSP) o algoritmos criptográficos.
-         Características:
-            Optimizada para operaciones especializadas como el cálculo de transformadas rápidas de Fourier (FFT) o encriptación.
-            Se encuentra en dispositivos de alta especialización.
-            
-      7. ALU de Punto Flotante:
-         Este tipo de ALU realiza operaciones sobre números en formato de punto flotante, que permiten representar una gama más amplia de valores con mayor precisión que los enteros.
-         Características:
-            Crucial en aplicaciones científicas y de gráficos que requieren alta precisión matemática.
-            Se encuentra en procesadores de alto rendimiento.
-            
-   Cada tipo de ALU se usa en diferentes contextos, dependiendo de los requerimientos del sistema en términos de velocidad, precisión y tipo de operaciones que se deben realizar.
+   Como informático o computista, considero que tanto la arquitectura computacional como la arquitectura del sistema toman en cuenta, aunque de manera diferente, la arquitectura de software, pero no en la misma medida ni con el mismo enfoque.
+
+La **arquitectura computacional** (o hardware) no se preocupa directamente por cómo se estructura el software en términos de lógica, pero establece las capacidades y limitaciones que el software debe respetar. El software se desarrolla teniendo en cuenta las instrucciones que puede ejecutar el procesador (ISA), la cantidad de memoria disponible y cómo se gestionan los recursos de hardware. En este sentido, aunque no diseña el software, la arquitectura computacional lo condiciona profundamente. Desde mi perspectiva, su enfoque hacia el software es indirecto, como un marco en el que el software debe operar.
+
+En contraste, la **arquitectura del sistema** sí tiene una visión más holística, considerando la interacción entre el hardware, el software y la infraestructura que los conecta. En este nivel, la arquitectura del sistema debe integrar cómo el software se desplegará y funcionará sobre los recursos físicos y lógicos. Aquí es donde se planifican aspectos como la seguridad, la redundancia, el rendimiento, y se toman decisiones basadas en cómo el software debe ejecutarse y comunicarse a través de diferentes máquinas y redes. En mi opinión, la arquitectura del sistema considera más explícitamente el diseño del software, ya que es esencial para la funcionalidad completa del sistema.
+
+En resumen, mientras que la arquitectura computacional influye en el software en cuanto a los recursos disponibles y las instrucciones que puede ejecutar, la arquitectura del sistema lo incorpora activamente en su diseño, considerando cómo interactúa con el hardware y con otros subsistemas. Ambos enfoques lo tienen en cuenta, pero con diferentes grados de involucramiento.
+
+![image](https://github.com/user-attachments/assets/b05ad884-6a9c-4dbe-bfcd-dd25d223df31)
+
