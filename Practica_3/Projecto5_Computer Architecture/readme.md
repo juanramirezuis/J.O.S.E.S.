@@ -5,7 +5,6 @@
 # Memory
 
 
-### Propósito General
 El archivo `Memory.hdl` define el chip de memoria del ordenador dentro del proyecto 5 de "Nand to Tetris". Este chip encapsula toda la lógica necesaria para gestionar la memoria del computador, que incluye tanto la memoria RAM como los dispositivos de memoria mapeada de entrada/salida (I/O). Se diseñó para permitir operaciones de lectura y escritura, asegurando que los datos se manejen de manera eficiente y conforme a las reglas del espacio de direcciones especificadas.
 
 ### Descripción Técnica
@@ -28,3 +27,5 @@ El chip de memoria está configurado para interactuar con la memoria RAM, la pan
 
 
 La implementación usa un enfoque modular para manejar diferentes áreas de memoria, lo que facilita el mantenimiento y la escalabilidad del sistema. Al separar claramente la lógica para cada tipo de memoria y utilizar componentes de des/multiplexación, el diseño asegura que las operaciones de memoria sean rápidas y eficientes, reduciendo la complejidad y mejorando la claridad del sistema de memoria global, además, este diseño permite una gestión eficiente y efectiva del espacio de memoria del computador, proporcionando un acceso claro y estructurado a la RAM y a los dispositivos de I/O mapeados. 
+
+![image](https://github.com/user-attachments/assets/b7e5be9d-04bf-4099-9f78-4f9134b3072d)
