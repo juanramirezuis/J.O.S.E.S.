@@ -1,4 +1,9 @@
-## Explicación del Código `Memory.hdl`
+# J.O.S.E.S.
+## Práctica 3:.
+
+
+# Memory
+
 
 ### Propósito General
 El archivo `Memory.hdl` define el chip de memoria del ordenador dentro del proyecto 5 de "Nand to Tetris". Este chip encapsula toda la lógica necesaria para gestionar la memoria del computador, que incluye tanto la memoria RAM como los dispositivos de memoria mapeada de entrada/salida (I/O). Se diseñó para permitir operaciones de lectura y escritura, asegurando que los datos se manejen de manera eficiente y conforme a las reglas del espacio de direcciones especificadas.
@@ -21,8 +26,5 @@ El chip de memoria está configurado para interactuar con la memoria RAM, la pan
 3. **Lógica de Multiplexación:**
    - `Mux16`: Se utilizan para seleccionar la salida adecuada basada en la dirección, priorizando la salida de dispositivos sobre la RAM cuando es necesario. Esto asegura que cualquier acceso a direcciones específicas resulte en la salida correcta, ya sea de la RAM, la pantalla o el teclado.
 
-### Justificación de la Implementación
-La implementación usa un enfoque modular para manejar diferentes áreas de memoria, lo que facilita el mantenimiento y la escalabilidad del sistema. Al separar claramente la lógica para cada tipo de memoria y utilizar componentes de des/multiplexación, el diseño asegura que las operaciones de memoria sean rápidas y eficientes, reduciendo la complejidad y mejorando la claridad del sistema de memoria global.
 
-### Conclusiones
-Este diseño permite una gestión eficiente y efectiva del espacio de memoria del computador, proporcionando un acceso claro y estructurado a la RAM y a los dispositivos de I/O mapeados. Al cumplir con las especificaciones detalladas en el libro "The Elements of Computing Systems", el chip de memoria se presenta como una solución robusta y funcional dentro del contexto del proyecto de ensamblaje de un computador desde componentes básicos hasta un sistema completamente operativo.
+La implementación usa un enfoque modular para manejar diferentes áreas de memoria, lo que facilita el mantenimiento y la escalabilidad del sistema. Al separar claramente la lógica para cada tipo de memoria y utilizar componentes de des/multiplexación, el diseño asegura que las operaciones de memoria sean rápidas y eficientes, reduciendo la complejidad y mejorando la claridad del sistema de memoria global, además, este diseño permite una gestión eficiente y efectiva del espacio de memoria del computador, proporcionando un acceso claro y estructurado a la RAM y a los dispositivos de I/O mapeados. 
