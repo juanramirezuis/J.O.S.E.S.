@@ -11,6 +11,7 @@ El archivo `Memory.hdl` define el chip de memoria del ordenador dentro del proye
 El chip de memoria está configurado para interactuar con la memoria RAM, la pantalla (Screen) y el teclado (Keyboard), usando múltiples componentes de desmultiplexación (`DMux`) y multiplexación (`Mux16`). 
 
 Aqui podemos ver su implementación:
+
 ![image](https://github.com/user-attachments/assets/777c0845-38e4-4759-98a7-f758460c3c25)
 
 
