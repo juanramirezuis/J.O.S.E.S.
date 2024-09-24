@@ -8,7 +8,11 @@
 El archivo `Memory.hdl` define el chip de memoria del ordenador dentro del proyecto 5 de "Nand to Tetris". Este chip encapsula toda la lógica necesaria para gestionar la memoria del computador, que incluye tanto la memoria RAM como los dispositivos de memoria mapeada de entrada/salida (I/O). Se diseñó para permitir operaciones de lectura y escritura, asegurando que los datos se manejen de manera eficiente y conforme a las reglas del espacio de direcciones especificadas.
 
 ### Descripción Técnica
-El chip de memoria está configurado para interactuar con la memoria RAM, la pantalla (Screen) y el teclado (Keyboard), usando múltiples componentes de desmultiplexación (`DMux`) y multiplexación (`Mux16`). Aquí se describen los detalles y la justificación de su implementación:
+El chip de memoria está configurado para interactuar con la memoria RAM, la pantalla (Screen) y el teclado (Keyboard), usando múltiples componentes de desmultiplexación (`DMux`) y multiplexación (`Mux16`). 
+
+Aqui podemos ver su implementación:
+![image](https://github.com/user-attachments/assets/777c0845-38e4-4759-98a7-f758460c3c25)
+
 
 1. **Entradas y Salidas:**
    - `in[16]`: Representa el dato a escribir en la memoria.
