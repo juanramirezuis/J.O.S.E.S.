@@ -30,6 +30,44 @@ Aqui podemos ver su implementación:
 3. **Lógica de Multiplexación:**
    - `Mux16`: Se utilizan para seleccionar la salida adecuada basada en la dirección, priorizando la salida de dispositivos sobre la RAM cuando es necesario. Esto asegura que cualquier acceso a direcciones específicas resulte en la salida correcta, ya sea de la RAM, la pantalla o el teclado.
 
+# Computer
+La parte de Computer en el Proyecto 5 de Nand2Tetris se refiere a la construcción y prueba de una computadora básica basada en la arquitectura del Hack computer. Esta computadora tiene una CPU simple, memoria, y la capacidad de ejecutar programas escritos en su propio lenguaje de máquina.
+
+![image](https://github.com/user-attachments/assets/6f34bbdf-6145-4b52-8c79-0637246c3aa4)
+
+1. **Arquitectura General del Hack Computer**
+El Hack Computer es un sistema de computación completo que se basa en los siguientes componentes principales:
+
+- Unidad Aritmético-Lógica (ALU): Realiza operaciones aritméticas y lógicas.
+- Registro A: Almacena valores que pueden ser usados para direcciones de memoria o para cálculos.
+- Registro D: Utilizado exclusivamente para operaciones aritméticas.
+- Memoria: Incluye tanto la RAM como el Registro M (una vista en la RAM).
+- Programa Counter (PC): Guarda la dirección de la instrucción actual en ejecución.
+
+2. **Construcción del Computer**
+El proyecto guía en la construcción de la CPU, que integra la ALU, los registros, y la lógica de control. Esta CPU se combina luego con la memoria y el programa counter para formar la computadora completa.
+
+3. **Programas de Prueba:** ComputerAdd y ComputerRect
+Los programas de prueba proporcionados (ComputerAdd y ComputerRect) se utilizan para verificar que la computadora que has construido funcione correctamente. 
+
+**ComputerAdd:**
+Este programa simple realiza la suma de dos números y almacena el resultado en la memoria. Verifica la funcionalidad básica de la ALU y la interacción entre los registros y la memoria.
+
+**ComputerRect:**
+Este programa dibuja un rectángulo en la pantalla, lo que prueba no solo las operaciones aritméticas, sino también las capacidades de control de flujo y acceso a la memoria en la computadora Hack.
+
+4. **Archivos de Prueba y Comparación**
+
+- **Archivos .tst:**
+Estos son archivos de prueba que contienen las instrucciones para ejecutar los programas en tu computadora Hack y observar los resultados. Incluyen secuencias de instrucciones y configuraciones que tu implementación debe ejecutar.
+- **Archivos .cmp:**
+Estos son archivos de comparación que contienen los resultados esperados de la ejecución de las pruebas. Cuando corres una prueba, tu computadora Hack genera una salida que se compara automáticamente con el archivo .cmp para verificar si la implementación es correcta.
+
+6. **Proceso de Prueba**
+Para probar tu computadora:
+Ejecutas el archivo .tst en el simulador.
+El simulador carga y ejecuta el programa en la computadora Hack que se construyo.
+Los resultados se comparan con los valores esperados en el archivo .cmp.
 
 La implementación usa un enfoque modular para manejar diferentes áreas de memoria, lo que facilita el mantenimiento y la escalabilidad del sistema. Al separar claramente la lógica para cada tipo de memoria y utilizar componentes de des/multiplexación, el diseño asegura que las operaciones de memoria sean rápidas y eficientes, reduciendo la complejidad y mejorando la claridad del sistema de memoria global, además, este diseño permite una gestión eficiente y efectiva del espacio de memoria del computador, proporcionando un acceso claro y estructurado a la RAM y a los dispositivos de I/O mapeados. 
 
