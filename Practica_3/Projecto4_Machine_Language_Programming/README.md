@@ -13,6 +13,7 @@ El archivo Fill.asm del proyecto 4 de Nand2Tetris es un programa en ensamblador 
 
 ![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_3/Projecto4_Machine_Language_Programming/Imagenes/Fill%20Emulator.png)
 
+![alt text](https://github.com/juanramirezuis/J_O_S_E_S/blob/main/Practica_3/Projecto4_Machine_Language_Programming/Imagenes/Fill%20Emulator%20Hack.png)
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [[Ejemplo Texto azul](ejemplo_de_link.com)]
