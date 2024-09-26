@@ -30,6 +30,35 @@ Aqui podemos ver su implementación:
 3. **Lógica de Multiplexación:**
    - `Mux16`: Se utilizan para seleccionar la salida adecuada basada en la dirección, priorizando la salida de dispositivos sobre la RAM cuando es necesario. Esto asegura que cualquier acceso a direcciones específicas resulte en la salida correcta, ya sea de la RAM, la pantalla o el teclado.
 
+
+# CPU
+
+
+El archivo `CPU.hdl` define el diseño de la CPU, que se encargará de ejecutar las instrucciones almacenadas en la memoria y de coordinar todas las operaciones de procesamiento. 
+
+### Descripción Técnica
+
+![image](https://github.com/user-attachments/assets/f0d0a4db-aace-4e18-9f43-5d2f9d2bbdd5)
+
+1. **Entradas y Salidas de la CPU:**
+
+   - `inM[16]`: La entrada que proviene de la memoria (el valor almacenado en la dirección de memoria actual).
+   - `instruction[16]`: La instrucción actual que se debe ejecutar.
+   - `reset`: Señal que reinicia la CPU.
+   - `outM[16]`: Salida de la CPU, el valor que debe escribirse en memoria.
+   - `writeM`: Señal de control que indica si debe escribirse el valor de salida en la memoria.
+   - `addressM[15]`: Dirección de memoria que se está leyendo o escribiendo.
+   - `pc[15]`: Contador del programa, que indica la instrucción siguiente a ejecutar.
+     
+2. **Componentes Clave:**
+- `ALU (Unidad Aritmético-Lógica)`: Se encarga de realizar operaciones aritméticas y lógicas basadas en las instrucciones recibidas.
+- `Registros A y D`: El registro A almacena direcciones o valores de datos, y el registro D es el registro de datos.
+- `Control de flujo`: Se maneja el flujo del programa a través del contador de programa (PC), que puede ser incrementado, reiniciado o cargado con una nueva dirección en caso de saltos condicionales o incondicionales.
+  
+3. **Lógica de Control:**
+El archivo HDL debe implementar la lógica para decodificar el tipo de instrucción (A-instruction o C-instruction), y determinar si se debe ejecutar un salto, realizar una operación en la ALU, o manejar datos de la memoria.
+
+
 # Computer
 La parte de Computer en el Proyecto 5 de Nand2Tetris se refiere a la construcción y prueba de una computadora básica basada en la arquitectura del Hack computer. Esta computadora tiene una CPU simple, memoria, y la capacidad de ejecutar programas escritos en su propio lenguaje de máquina.
 
