@@ -48,7 +48,7 @@ El Hack Computer es un sistema de computación completo que se basa en los sigui
 El proyecto guía en la construcción de la CPU, que integra la ALU, los registros, y la lógica de control. Esta CPU se combina luego con la memoria y el programa counter para formar la computadora completa.
 
 3. **Programas de Prueba:** ComputerAdd y ComputerRect
-Los programas de prueba proporcionados (ComputerAdd y ComputerRect) se utilizan para verificar que la computadora que has construido funcione correctamente. Aquí te explico cada uno:
+Los programas de prueba proporcionados (ComputerAdd y ComputerRect) se utilizan para verificar que la computadora que has construido funcione correctamente. 
 
 **ComputerAdd:**
 Este programa simple realiza la suma de dos números y almacena el resultado en la memoria. Verifica la funcionalidad básica de la ALU y la interacción entre los registros y la memoria.
