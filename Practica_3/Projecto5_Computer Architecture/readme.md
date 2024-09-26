@@ -40,9 +40,9 @@ El Hack Computer es un sistema de computación completo que se basa en los sigui
 
 - Unidad Aritmético-Lógica (ALU): Realiza operaciones aritméticas y lógicas.
 - Registro A: Almacena valores que pueden ser usados para direcciones de memoria o para cálculos.
--Registro D: Utilizado exclusivamente para operaciones aritméticas.
--Memoria: Incluye tanto la RAM como el Registro M (una vista en la RAM).
--Programa Counter (PC): Guarda la dirección de la instrucción actual en ejecución.
+- Registro D: Utilizado exclusivamente para operaciones aritméticas.
+- Memoria: Incluye tanto la RAM como el Registro M (una vista en la RAM).
+- Programa Counter (PC): Guarda la dirección de la instrucción actual en ejecución.
 
 2. **Construcción del Computer**
 El proyecto guía en la construcción de la CPU, que integra la ALU, los registros, y la lógica de control. Esta CPU se combina luego con la memoria y el programa counter para formar la computadora completa.
