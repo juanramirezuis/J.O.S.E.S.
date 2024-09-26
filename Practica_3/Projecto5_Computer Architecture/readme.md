@@ -31,6 +31,7 @@ Aqui podemos ver su implementación:
    - `Mux16`: Se utilizan para seleccionar la salida adecuada basada en la dirección, priorizando la salida de dispositivos sobre la RAM cuando es necesario. Esto asegura que cualquier acceso a direcciones específicas resulte en la salida correcta, ya sea de la RAM, la pantalla o el teclado.
 
 # Computer
+La parte de Computer en el Proyecto 5 de Nand2Tetris se refiere a la construcción y prueba de una computadora básica basada en la arquitectura del Hack computer. Esta computadora tiene una CPU simple, memoria, y la capacidad de ejecutar programas escritos en su propio lenguaje de máquina.
 1. **Arquitectura General del Hack Computer**
 El Hack Computer es un sistema de computación completo que se basa en los siguientes componentes principales:
 
