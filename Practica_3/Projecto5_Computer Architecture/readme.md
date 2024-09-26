@@ -66,7 +66,7 @@ Estos son archivos de comparación que contienen los resultados esperados de la 
 6. **Proceso de Prueba**
 Para probar tu computadora:
 Ejecutas el archivo .tst en el simulador.
-El simulador carga y ejecuta el programa en la computadora Hack que construiste.
+El simulador carga y ejecuta el programa en la computadora Hack que se construyo.
 Los resultados se comparan con los valores esperados en el archivo .cmp.
 
 La implementación usa un enfoque modular para manejar diferentes áreas de memoria, lo que facilita el mantenimiento y la escalabilidad del sistema. Al separar claramente la lógica para cada tipo de memoria y utilizar componentes de des/multiplexación, el diseño asegura que las operaciones de memoria sean rápidas y eficientes, reduciendo la complejidad y mejorando la claridad del sistema de memoria global, además, este diseño permite una gestión eficiente y efectiva del espacio de memoria del computador, proporcionando un acceso claro y estructurado a la RAM y a los dispositivos de I/O mapeados. 
