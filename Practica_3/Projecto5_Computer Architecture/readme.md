@@ -56,7 +56,7 @@ El archivo `CPU.hdl` define el diseño de la CPU, que se encargará de ejecutar 
 - `Control de flujo`: Se maneja el flujo del programa a través del contador de programa (PC), que puede ser incrementado, reiniciado o cargado con una nueva dirección en caso de saltos condicionales o incondicionales.
   
 3. **Lógica de Control:**
-El archivo HDL debe implementar la lógica para decodificar el tipo de instrucción (A-instruction o C-instruction), y determinar si se debe ejecutar un salto, realizar una operación en la ALU, o manejar datos de la memoria.
+El archivo HDL debe implementar la lógica para decodificar el tipo de instrucción: Address Instruction (bit 15 = 0) o Compute Instruction (bit 15 = 1), y determinar si se debe ejecutar un salto, realizar una operación en la ALU, o manejar datos de la memoria.
 
 
 # Computer
