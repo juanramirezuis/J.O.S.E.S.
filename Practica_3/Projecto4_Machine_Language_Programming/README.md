@@ -11,3 +11,5 @@ El archivo Mult.asm del proyecto 4 de Nand2tetris es un programa en ensamblador 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
  - [[Ejemplo Texto azul](ejemplo_de_link.com)]
+### 2. **Fill.asm**
+El archivo Fill.asm del proyecto 4 de Nand2Tetris es un programa en ensamblador que controla la pantalla gráfica (Screen). El programa verifica el valor del teclado (RAM[24576]), y dependiendo de si una tecla está presionada o no, llena la pantalla con un color o la limpia. Utiliza un bucle para escanear cada dirección de la memoria de la pantalla, escribiendo 0 o -1 en cada una, para limpiar o llenar la pantalla, respectivamente.
