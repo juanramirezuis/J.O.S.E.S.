@@ -1,0 +1,117 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/5/CPU.hdl
+/**
+ * The Hack Central Processing unit (CPU).
+ * Parses the binary code in the instruction input and executes it according to the
+ * Hack machine language specification. In the case of a C-instruction, computes the
+ * function specified by the instruction. If the instruction specifies to read a memory
+ * value, the inM input is expected to contain this value. If the instruction specifies
+ * to write a value to the memory, sets the outM output to this value, sets the addressM
+ * output to the target address, and asserts the writeM output (when writeM = 0, any
+ * value may appear in outM).
+ * If the reset input is 0, computes the address of the next instruction and sets the
+ * pc output to that value. If the reset input is 1, sets pc to 0.
+ * Note: The outM and writeM outputs are combinational: they are affected by the
+ * instruction's execution during the current cycle. The addressM and pc outputs are
+ * clocked: although they are affected by the instruction's execution, they commit to
+ * their new values only in the next cycle.
+ */
+CHIP CPU {
+
+    IN  inM[16],         // M value input  (M = contents of RAM[A])
+        instruction[16], // Instruction for execution
+        reset;           // Signals whether to re-start the current
+                         // program (reset==1) or continue executing
+                         // the current program (reset==0).
+
+    OUT outM[16],        // M value output
+        writeM,          // Write to M? 
+        addressM[15],    // Address in data memory (of M)
+        pc[15];          // address of next instruction
+
+    PARTS:
+
+    Mux16(a=false, 
+          b=instruction, 
+          sel=instruction[15], 
+          out[0]=jumpIfGreaterThan,  
+          out[1]=jumpIfEqual,       
+          out[2]=jumpIfLessThan,    
+          out[3]=writeM,             
+          out[4]=loadD,              
+          out[5]=loadA,              
+          out[6]=aluNo,            
+          out[7]=aluF,              
+          out[8]=aluNotY,         
+          out[9]=aluZeroY,         
+          out[10]=aluNotX,           
+          out[11]=aluZeroX,         
+          out[12]=selectAOrM,       
+          // out[13] y out[14] no se usan
+          out[15]=instructionType   
+    );
+
+    ALU(x=xInput,  
+        y=yInput, 
+        zx=aluZeroX, 
+        nx=aluNotX, 
+        zy=aluZeroY, 
+        ny=aluNotY, 
+        f=aluF, 
+        no=aluNo, 
+        out=aluOutput,
+        out=outM,       
+        zr=zeroFlag,    
+        ng=negFlag 
+    );
+
+    // Revisar si el resultado del ALU es menor o igual a cero
+    Or(a=zeroFlag, b=negFlag, out=lessThanOrEqualZero);
+    Not(in=lessThanOrEqualZero, out=positiveFlag); 
+
+    Mux16(
+        a=instruction, 
+        b=aluOutput, 
+        sel=instructionType, 
+        out=aRegisterInput
+    );
+    Mux16(
+        a=aRegisterOutput, 
+        b=inM, 
+        sel=selectAOrM, 
+        out=yInput
+    );
+
+    // Determinar si el ARegister deberia cargar su valor de entrada
+    Not(in=instructionType, out=notCInstruction);
+    Or(a=notCInstruction, b=loadA, out=loadAReg);
+
+    ARegister(
+        in=aRegisterInput, 
+        load=loadAReg, 
+        out=aRegisterOutput, 
+        out[0..14]=addressM  
+    );
+    DRegister(
+        in=aluOutput, 
+        load=loadD, 
+        out=xInput  
+    );
+
+    // Logica del Jump
+    And(a=jumpIfEqual, b=zeroFlag, out=jumpEqual);
+    And(a=jumpIfLessThan, b=negFlag, out=jumpLessThan);
+    And(a=jumpIfGreaterThan, b=positiveFlag, out=jumpGreaterThan);
+    Or(a=jumpEqual, b=jumpLessThan, out=jumpLessThanOrEqual);
+    Or(a=jumpLessThanOrEqual, b=jumpGreaterThan, out=jump);
+
+    PC(
+        in=aRegisterOutput, 
+        load=jump, 
+        inc=true, 
+        reset=reset, 
+        out[0..14]=pc
+    );
+}
