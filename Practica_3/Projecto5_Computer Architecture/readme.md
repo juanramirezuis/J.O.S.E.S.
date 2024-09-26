@@ -58,9 +58,9 @@ Este programa dibuja un rectángulo en la pantalla, lo que prueba no solo las op
 
 4. **Archivos de Prueba y Comparación**
 
-**Archivos .tst:**
+- **Archivos .tst:**
 Estos son archivos de prueba que contienen las instrucciones para ejecutar los programas en tu computadora Hack y observar los resultados. Incluyen secuencias de instrucciones y configuraciones que tu implementación debe ejecutar.
-**Archivos .cmp:**
+- **Archivos .cmp:**
 Estos son archivos de comparación que contienen los resultados esperados de la ejecución de las pruebas. Cuando corres una prueba, tu computadora Hack genera una salida que se compara automáticamente con el archivo .cmp para verificar si la implementación es correcta.
 
 6. **Proceso de Prueba**
