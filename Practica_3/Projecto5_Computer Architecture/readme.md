@@ -32,6 +32,9 @@ Aqui podemos ver su implementación:
 
 # Computer
 La parte de Computer en el Proyecto 5 de Nand2Tetris se refiere a la construcción y prueba de una computadora básica basada en la arquitectura del Hack computer. Esta computadora tiene una CPU simple, memoria, y la capacidad de ejecutar programas escritos en su propio lenguaje de máquina.
+
+![image](https://github.com/user-attachments/assets/6f34bbdf-6145-4b52-8c79-0637246c3aa4)
+
 1. **Arquitectura General del Hack Computer**
 El Hack Computer es un sistema de computación completo que se basa en los siguientes componentes principales:
 
