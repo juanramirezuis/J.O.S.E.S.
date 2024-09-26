@@ -38,8 +38,8 @@ La parte de Computer en el Proyecto 5 de Nand2Tetris se refiere a la construcci�
 1. **Arquitectura General del Hack Computer**
 El Hack Computer es un sistema de computación completo que se basa en los siguientes componentes principales:
 
--Unidad Aritmético-Lógica (ALU): Realiza operaciones aritméticas y lógicas.
--Registro A: Almacena valores que pueden ser usados para direcciones de memoria o para cálculos.
+- Unidad Aritmético-Lógica (ALU): Realiza operaciones aritméticas y lógicas.
+- Registro A: Almacena valores que pueden ser usados para direcciones de memoria o para cálculos.
 -Registro D: Utilizado exclusivamente para operaciones aritméticas.
 -Memoria: Incluye tanto la RAM como el Registro M (una vista en la RAM).
 -Programa Counter (PC): Guarda la dirección de la instrucción actual en ejecución.
