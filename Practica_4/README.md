@@ -41,36 +41,6 @@ La clase `Assembler` integra las demás clases para realizar el ensamblaje compl
 # lo ponen ahi
 ```
 
-## Instrucciones para Ejecutar el Proyecto
-
-1. Asegúrate de tener Python instalado en tu sistema.
-2. Clona el repositorio:
-
-   ```bash
-   git clone https://github.com/juanramirezuis/J_O_S_E_S.git
-   ```
-
-3. Navega al directorio del proyecto:
-
-   ```bash
-   cd nand2tetris-project6
-   ```
-
-4. Ejecuta el ensamblador con un archivo de entrada:
-
-   ```bash
-   python assembler.py input.asm output.hack
-   ```
-
-## Contribuciones
-
-Si deseas contribuir a este proyecto, no dudes en abrir un issue o enviar un pull request. Estoy abierto a sugerencias y mejoras.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-
 ------------------
 
 
