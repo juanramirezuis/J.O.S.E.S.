@@ -1,7 +1,5 @@
 # J.O.S.E.S.
 
-![image](https://github.com/user-attachments/assets/b05ad884-6a9c-4dbe-bfcd-dd25d223df31)
-
 ## Practica 4 : Proyecto 6
 ## 1. Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan? Justifique su respuesta.
 La principal limitante del ensamblador en el Proyecto es su capacidad para manejar símbolos y etiquetas de manera eficiente. 
