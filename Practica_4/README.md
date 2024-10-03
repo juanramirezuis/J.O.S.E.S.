@@ -8,17 +8,13 @@ Para llevar a cabo implementación del ensamblador para el Proyecto 6 del curso 
 3. **Code**
 4. **Assembler**
 
-## Descripción de las Clases
 
 ### 1. Symbol Table
 
 La clase `SymbolTable` es responsable de gestionar las etiquetas y variables utilizadas en el código ensamblador. Permite agregar y buscar símbolos, asegurando que cada símbolo tenga un valor único.
 
 ```python
-# Ejemplo de uso de la clase SymbolTable
-symbol_table = SymbolTable()
-symbol_table.add_entry("LOOP", 10)
-address = symbol_table.get_address("LOOP")
+
 ```
 
 ### 2. Parser
@@ -26,11 +22,7 @@ address = symbol_table.get_address("LOOP")
 La clase `Parser` se encarga de analizar el código fuente, leyendo línea por línea. Esta clase convierte las instrucciones de ensamblador en un formato que puede ser procesado por la clase `Code`.
 
 ```python
-# Ejemplo de uso de la clase Parser
-parser = Parser("input.asm")
-while parser.has_more_commands():
-    parser.advance()
-    command_type = parser.command_type()
+
 ```
 
 ### 3. Code
@@ -38,9 +30,7 @@ while parser.has_more_commands():
 La clase `Code` traduce las instrucciones de ensamblador a código máquina binario. Proporciona métodos para convertir instrucciones A y C a su representación binaria correspondiente.
 
 ```python
-# Ejemplo de uso de la clase Code
-code = Code()
-binary_instruction = code.translate("D=A")
+# lo ponen ahi
 ```
 
 ### 4. Assembler
@@ -48,9 +38,7 @@ binary_instruction = code.translate("D=A")
 La clase `Assembler` integra las demás clases para realizar el ensamblaje completo del código. Procesa el archivo de entrada, utiliza `SymbolTable` para manejar etiquetas y variables, y finalmente produce un archivo de salida con el código máquina.
 
 ```python
-# Ejemplo de uso de la clase Assembler
-assembler = Assembler("input.asm", "output.hack")
-assembler.assemble()
+# lo ponen ahi
 ```
 
 ## Instrucciones para Ejecutar el Proyecto
