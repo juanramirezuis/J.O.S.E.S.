@@ -17,10 +17,10 @@ class Parser:
 
     def commandType(self) -> Literal['A', 'L', 'C']:
         if self.command[0] == '@':
-            return 'A_COMMAND'
+            return A_COMMAND
         elif self.command[0] == '(' and self.command[-1] == ')':
-            return 'L_COMMAND'
-        return 'C_COMMAND'
+            return L_COMMAND
+        return C_COMMAND
 
     def symbol(self) -> str:
         return self.command.strip('@()')
