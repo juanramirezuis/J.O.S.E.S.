@@ -47,7 +47,7 @@ La clase `Assembler` integra las demás clases para realizar el ensamblaje compl
 2. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu_usuario/nand2tetris-project6.git
+   git clone https://github.com/juanramirezuis/J_O_S_E_S.git
    ```
 
 3. Navega al directorio del proyecto:
