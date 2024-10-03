@@ -215,4 +215,20 @@ if __name__ == '__main__':
         a.softPass()
         a.translateFile()        
 ```
+### **Pruebas**
+Una vez realizado nuestro propio ensamblador procedemos a probarlo para ello haremos uso de cuatro programas de prueba y el ensamblador suministrado por nand2Tetris entonces lo que debemos hacer es pasar las cuatro programas de prueba a nuestro ensamblador y el archivo punto yat que genera es decir la traducción a binario que genera debemos compararla con la traducción a binario que hace el ensamblador suministrado por nand2tetris.
+- El primer programa ADD, este programa lo que hace es sumar los números 1, 2 y 3 y almacenarlos en rc.
+  ![image](https://github.com/user-attachments/assets/9c04033f-a3ba-4376-97d7-b20a223eab94) ![image](https://github.com/user-attachments/assets/f7a3e63b-0f4b-441d-81e1-b670b02ac77d)
+- El programa de MAX, Este programa lo que hace es comparar dos números y decir cuál de ellos es el que tiene mayor valor es decir cuál es el número mayor.
+   ![image](https://github.com/user-attachments/assets/dfef3577-968a-44cc-9204-bfe78fb68dd1) ![image](https://github.com/user-attachments/assets/91f8104b-70dd-4dcd-9081-ecbaa1e415c4)
+  
+ - El programa de prueba RECT, Este programa lo que hace es crear un rectángulo en la esquinas superior izquierda de la pantalla con 16 píxeles de ancho y reservado píxeles de alto.
+   
+  ![image](https://github.com/user-attachments/assets/c27ebd0b-af60-4c38-a652-e9431e187587) ![image](https://github.com/user-attachments/assets/1cadd256-77c6-4dd1-8af9-d0dc25b5ab3b)
+ - Por último el programa de prueba PONG, Este programa consiste en ejecutar un juego para un solo jugador una pelota rebota en las paredes de la pantalla el jugador intenta romper la pelota con una paleta presionando las teclas izquierda derecha del teclado para moverse por cada golpe exitoso jugador gana un punto y la paleta se coge un poco para que el juego sea un poco más desafiante si el jugador pierde la pelota el juego termina para salir del juego se presiona la tecla “esc”.
+   
+  ![image](https://github.com/user-attachments/assets/60d7fc39-bc67-45cf-b25a-c2ea1eebbfcc) ![image](https://github.com/user-attachments/assets/94d76d11-793b-4b65-91a6-a2d0f61a7857)
+## Bibliografia
+Esta practica fue resuelta apoyandonos del siguiente material:
+ - [[Ejemplo Texto azul](ejemplo_de_link.com)]
 
