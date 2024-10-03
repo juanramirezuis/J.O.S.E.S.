@@ -177,7 +177,8 @@ Una vez realizado nuestro propio ensamblador procedemos a probarlo para ello har
 
    ![image](https://github.com/user-attachments/assets/dfef3577-968a-44cc-9204-bfe78fb68dd1) ![image](https://github.com/user-attachments/assets/91f8104b-70dd-4dcd-9081-ecbaa1e415c4)
   
- -El programa de prueba RECT, Este programa lo que hace es crear un rectángulo en la esquinas superior izquierda de la pantalla con 16 píxeles de ancho y reservado píxeles de alto.
+ - El programa de prueba RECT, Este programa lo que hace es crear un rectángulo en la esquinas superior izquierda de la pantalla con 16 píxeles de ancho y reservado píxeles de alto.
+   
   ![image](https://github.com/user-attachments/assets/c27ebd0b-af60-4c38-a652-e9431e187587) ![image](https://github.com/user-attachments/assets/1cadd256-77c6-4dd1-8af9-d0dc25b5ab3b)
 
 
