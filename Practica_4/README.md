@@ -60,7 +60,8 @@ El archivo Fill.asm del proyecto 4 de Nand2Tetris es un programa en ensamblador 
 ### **Pruebas**
 Una vez realizado nuestro propio ensamblador procedemos a probarlo para ello haremos uso de cuatro programas de prueba y el ensamblador suministrado por nand2Tetris entonces lo que debemos hacer es pasar las cuatro programas de prueba a nuestro ensamblador y el archivo punto yat que genera es decir la traducción a binario que genera debemos compararla con la traducción a binario que hace el ensamblador suministrado por nand2tetris.
 - El primer programa ADD, este programa lo que hace es sumar los números 1, 2 y 3 y almacenarlos en rc.
-  ![image](https://github.com/user-attachments/assets/9c04033f-a3ba-4376-97d7-b20a223eab94)
+  ![image](https://github.com/user-attachments/assets/9c04033f-a3ba-4376-97d7-b20a223eab94) ![image](https://github.com/user-attachments/assets/f7a3e63b-0f4b-441d-81e1-b670b02ac77d)
+
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
