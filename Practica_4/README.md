@@ -1,7 +1,7 @@
 # J.O.S.E.S.
 # Proyecto 6: Ensamblador de Nand2Tetris
 
-Este repositorio contiene la implementación del ensamblador para el Proyecto 6 del curso Nand2Tetris. En este proyecto, he desarrollado las siguientes clases:
+Para llevar a cabo implementación del ensamblador para el Proyecto 6 del curso Nand2Tetris, se han desarrollado las siguientes clases:
 
 1. **Symbol Table**
 2. **Parser**
