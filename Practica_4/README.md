@@ -181,6 +181,11 @@ Una vez realizado nuestro propio ensamblador procedemos a probarlo para ello har
    
   ![image](https://github.com/user-attachments/assets/c27ebd0b-af60-4c38-a652-e9431e187587) ![image](https://github.com/user-attachments/assets/1cadd256-77c6-4dd1-8af9-d0dc25b5ab3b)
 
+ - Por último el programa de prueba PONG, Este programa consiste en ejecutar un juego para un solo jugador una pelota rebota en las paredes de la pantalla el jugador intenta romper la pelota con una paleta presionando las teclas izquierda derecha del teclado para moverse por cada golpe exitoso jugador gana un punto y la paleta se coge un poco para que el juego sea un poco más desafiante si el jugador pierde la pelota el juego termina para salir del juego se presiona la tecla “esc”.
+   
+  ![image](https://github.com/user-attachments/assets/60d7fc39-bc67-45cf-b25a-c2ea1eebbfcc) ![image](https://github.com/user-attachments/assets/94d76d11-793b-4b65-91a6-a2d0f61a7857)
+
+
 
 ## Bibliografia
 Esta practica fue resuelta apoyandonos del siguiente material:
